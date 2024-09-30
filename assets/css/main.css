@@ -79,6 +79,11 @@ h1
     fill: var(--dark-contrast);
 }
 
+.highlight-svg
+{
+    fill: var(--red);
+}
+
 #crosshair path, .logo-flags path
 {
     transition-duration: 500ms;
@@ -110,7 +115,7 @@ h1
 
 #knife.throw
 {
-    animation: knife-ready 500ms ease forwards, knife-throw 500ms cubic-bezier(0.15, 0, 0.15, 0) 800ms forwards; /* cubic-bezier(0.15, 0, 0.15, 0) */
+    animation: knife-ready 500ms ease forwards, knife-throw 500ms cubic-bezier(0.15, 0, 0.15, 0) 750ms forwards; /* cubic-bezier(0.15, 0, 0.15, 0) */
 }
 
 #knife.return
@@ -154,6 +159,68 @@ h1
     {
         transform: translateX(0px) rotate(0deg) scale(1);
         fill: var(--dark-contrast);
+    }
+}
+
+#bottom-segment path
+{
+    transition-duration: 500ms;
+    /* fill: var(--red); */
+}
+
+#a-slice, #r-1-slice, #m-1-slice, #m-2-slice, #m-3-slice, #o-slice, #r-2-slice, #y-slice
+{
+    position: absolute;
+    height: 60%;
+    top: 20%;
+    /* background-color: #00000022; */
+}
+
+.slice-fall
+{
+    animation: slice-rotate 500ms ease forwards, slice-fall 300ms ease-in 1s forwards;
+}
+
+.slice-return
+{
+    animation: slice-return 750ms cubic-bezier(0, 0.75, 1, 1) forwards; /* cubic-bezier(0.5, 0.1, 0.5, 1.4) */
+}
+
+@keyframes slice-rotate 
+{
+    0%
+    {
+        transform: rotate(0deg);
+        fill: var(--dark-contrast);
+    }
+    100%
+    {
+        transform: rotate(30deg);
+        fill: var(--red);
+    }
+}
+
+@keyframes slice-fall 
+{
+    0%
+    {
+        transform: translateY(0px) rotate(30deg) ;
+    }
+    100%
+    {
+        transform: translateY(200px) rotate(30deg);
+    }
+}
+
+@keyframes slice-return
+{
+    0%
+    {
+        transform: translateY(200px);
+    }
+    100%
+    {
+        transform: translateY(0px);
     }
 }
 
