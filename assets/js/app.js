@@ -14,7 +14,7 @@ $(function()
 
 $("#logo-1-bounds").on("mouseenter", function()
 {
-    $(this).find("#crosshair-horizontal").css({"x": "50", "width" : "800"});
+    $(this).find("#crosshair-horizontal").css({"x": "50", "width" : "800"}); // mobile doesn't like x/y attr, maybe redo as animation with translate
     $(this).find("#crosshair-vertical"  ).css({"y": "-90", "height": "340"});
     $(this).find("#crosshair").children().css({"fill": css_red});
     $(this).find("#a-crossing").css({"transform": "scaleX(0)"});
@@ -48,12 +48,20 @@ $("#logo-1-bounds").on("mouseenter", function()
 
 $("#logo-2-bounds").on("mouseenter", function()
 {
-    $(this).find("#knife").removeClass("return").addClass("throw");
+    $(this).find("#knife").removeClass("return").removeClass("throw").addClass("ready");
+    $(this).find("#target").removeClass("return").addClass("ready");
     $(this).find(".logo-flags").find("path").css({"transform": "translateX(16px)"});
+
+}).on("mousedown", function(event)
+{
+    let mouseX = (event.offsetX / $(this).width() - 0.29) * 880;
+    let mouseY = (event.offsetY / $(this).height() - 0.5) * 290;
+    $(this).find("#knife").css({"--destX": `${mouseX}px`, "--destY": `${mouseY}px`}).removeClass("ready").removeClass("return").addClass("throw");
 
 }).on("mouseleave", function()
 {
-    $(this).find("#knife").removeClass("throw").addClass("return");
+    $(this).find("#knife").removeClass("throw").removeClass("ready").addClass("return");
+    $(this).find("#target").removeClass("ready").addClass("return");
     $(this).find(".logo-flags").find("path").css({"transform": "translateX(0px)"});
 });
 
