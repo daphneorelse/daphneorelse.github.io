@@ -7,7 +7,7 @@
     </head>
     <body>
         <div id="title-screen">
-            <div class="logo-area" id="logo-1-bounds">
+            <div class="logo-area" id="logo-1-bounds" style="animation-delay: 300ms">
                 <svg class="big-logo" viewBox="-200 -100 1048 357" xmlns="http://www.w3.org/2000/svg">
                     <g id="crosshair">
                         <path d="M398.621 124.494C389.504 124.494 382.189 122.575 376.676 118.739C371.162 114.903 367.616 109.536 366.038 102.638C364.5 95.7404 365.14 87.6802 367.96 78.4574C370.78 69.2347 375.073 61.1551 380.841 54.2187C386.649 47.2823 393.483 41.8959 401.342 38.0595C409.201 34.2232 417.689 32.305 426.806 32.305C435.923 32.305 443.239 34.2232 448.752 38.0595C454.265 41.8959 457.785 47.2823 459.311 54.2187C460.878 61.1551 460.251 69.2347 457.432 78.4574C454.612 87.6802 450.304 95.7404 444.508 102.638C438.752 109.536 431.945 114.903 424.086 118.739C416.227 122.575 407.739 124.494 398.621 124.494ZM403.896 107.637C408.84 107.637 413.37 106.339 417.487 103.742C421.615 101.107 425.165 97.581 428.136 93.1634C431.148 88.7458 433.484 83.8244 435.142 78.3993C436.813 72.9354 437.493 67.9947 437.182 63.5771C436.923 59.1207 435.536 55.575 433.019 52.9399C430.501 50.3048 426.771 48.9873 421.827 48.9873C416.762 48.9873 412.145 50.3048 407.976 52.9399C403.848 55.575 400.272 59.1207 397.248 63.5771C394.276 67.9947 391.956 72.9354 390.285 78.3993C388.626 83.8244 387.932 88.7458 388.202 93.1634C388.513 97.581 389.927 101.107 392.444 103.742C395.014 106.339 398.831 107.637 403.896 107.637Z" />
@@ -30,7 +30,7 @@
                 </svg>
                     
             </div>
-            <div class="logo-area" id="logo-2-bounds">
+            <div class="logo-area" id="logo-2-bounds" style="animation-delay: 600ms">
                 <svg class="big-logo" viewBox="-135 -100 1048 357" xmlns="http://www.w3.org/2000/svg">
                     <g class="logo-flags">
                         <path d="M225.995 68H220.637L207.637 85.2135H221.495L225.995 68Z" />
@@ -50,7 +50,7 @@
                     
                 </svg>
             </div>
-            <div class="logo-area" id="logo-3-bounds">
+            <div class="logo-area" id="logo-3-bounds" style="animation-delay: 1000ms">
                 <div id="a-slice" style="left: 14%; width: 15%"></div>
                 <div id="r-1-slice" style="left: 29%; width: 8%"></div>
                 <div id="m-1-slice" style="left: 37%; width: 6%"></div>
@@ -81,9 +81,27 @@
                 </svg>
                     
             </div>
+            <div class="logo-area flex-column space-evenly" style="height: 7%; margin-bottom: 5%; animation-delay: 1500ms">
+                <h2>Violent sounds.</h2>
+            </div>
         </div>
-        <div id="nav-bar">
-
+        <div id="section-divider"></div>
+        
+        
+        <div id="body-section">
+            <div class="flex-row space-evenly light-background medium-gap medium-padding medium-margin z-10" style="height: 60px; width: fit-content; position: sticky; top: 20px">
+                <div class="nav-item">
+                    <h2 class="nav-label">LaunchCodes</h2>
+                </div>
+                <div class="nav-item">
+                    <h2 class="nav-label">Info</h2>
+                </div>
+                <div class="nav-item">
+                    <h2 class="nav-label">Contact</h2>
+                </div>
+                <div id="nav-highlight"></div>
+            </div>
+            <div id="content-section"></div>
         </div>
         <script src="assets/js/app.js"></script>
     </body>
