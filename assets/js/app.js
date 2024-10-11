@@ -1,22 +1,21 @@
 const root = document.querySelector(':root');
 const root_styles = getComputedStyle(root);
-const css_white = root_styles.getPropertyValue('--white').trim();
-const css_contrast = root_styles.getPropertyValue('--dark-contrast').trim();
-const css_red = root_styles.getPropertyValue('--red').trim();
+const css_white = root_styles.getPropertyValue('--white');
+const css_contrast = root_styles.getPropertyValue('--dark-contrast');
+const css_red = root_styles.getPropertyValue('--red');
+// const css_title_background = root_styles.getPropertyValue('--title-background');
 
 const slice_map = new Map([["a-slice", "#slice-1"], ["r-1-slice", "#slice-2"], ["m-1-slice", "#slice-3"], 
     ["m-2-slice", "#slice-4"], ["m-3-slice", "#slice-5"], ["o-slice", "#slice-6"], ["r-2-slice", "#slice-7"], ["y-slice", "#slice-8"]]);
 let slice_set = new Set();
 let knifeThrown = false;
 
-let selected_tab = 1;
+let selected_tab = 0;
 
 $(function()
 {
-    const firstNavItem = $(".nav-item").eq(selected_tab);
-    $("#nav-highlight").css({"left": firstNavItem.position().left, "width": firstNavItem.css("width")});
-
-    newTabSelected();
+    setTimeout(newTabSelected(), 100);
+    // newTabSelected();
 });
 
 $("#logo-1-bounds").on("mouseenter", function()
@@ -94,6 +93,9 @@ $("#logo-3-bounds").on("mouseleave", function()
 
 function newTabSelected()
 {
+    let navItem = $(".nav-item").eq(selected_tab);
+    $("#nav-highlight").css({"left": navItem.position().left, "width": navItem.css("width")});
+
     let contentSection = $("#content-section");
     contentSection.css({"opacity": 0});
     setTimeout(() => 
@@ -120,9 +122,6 @@ $(".nav-item").on("mousedown", function()
     const new_index = $(".nav-item").index($(this));
     if (new_index !== selected_tab)
     {
-        let highlight = $("#nav-highlight");
-        highlight.css({"left": $(this).position().left, "width": $(this).css("width")});
-    
         selected_tab = new_index;
         newTabSelected();
 
@@ -135,4 +134,69 @@ $(".nav-item").on("mousedown", function()
 }).on("mouseleave", function()
 {
     $(this).css({"color": css_contrast});
+});
+
+$("#content-section").on("mouseenter", "#launchcodes-logo", function()
+{
+    $(this).find("#crosshair").css({"fill": css_red});
+
+}).on("mouseleave", "#launchcodes-logo", function()
+{
+    $(this).find("#crosshair").css({"fill": css_contrast});
+});
+
+// $("#content-section").on("mousemove", ".scroll-container", function()
+// {
+//     window.scrollTo({top: $("#content-section").position().top, behavior: "smooth"});
+// });
+
+// document.querySelector(".scroll-container").addEventListener("scroll", function()
+// {
+//     console.log("scroll");
+// })
+
+// window.onscrollend = (event) =>
+// {
+//     console.log("scroll end");
+// }
+
+
+
+$("#content-section").on("mouseenter", ".tour-highlight-area", function()
+{
+    
+    
+    // const index = $(".tour-highlight-area").index($(this));
+    
+    $(".tour-highlight-area").find("div").css({"opacity": "50%"});
+    $(this).find("div").css({"opacity": "0%"});
+
+    const video = $(this).find($("video"));
+    video.css({"opacity": "100%"});
+    video.trigger("load");
+    video.trigger("play");
+    // $(this).find($("video")).get(0).play();
+    $(".red-corner").css({"opacity": "100%"});
+    $(".red-corner").eq(0).css({"left": $(this).css("left"), "top": $(this).css("top")});
+    $(".red-corner").eq(1).css({"right": $(this).css("right"), "top": $(this).css("top")});
+    $(".red-corner").eq(2).css({"right": $(this).css("right"), "bottom": $(this).css("bottom")});
+    $(".red-corner").eq(3).css({"left": $(this).css("left"), "bottom": $(this).css("bottom")});
+
+    // $("#tour-scroll-menu").scrollTo($("#tour-scroll-menu div").eq(index).css("left"));
+
+    // const menu = $("#tour-scroll-menu");
+    // const scrollTo = $("#tour-scroll-menu div").eq(index);
+    // menu.animate({
+    //     scrollLeft: scrollTo.offset().left - menu.offset().left + menu.scrollLeft()
+    //   });
+}).on("mouseleave", ".tour-highlight-area", function()
+{
+    $(".tour-highlight-area div").css({"opacity": "0%"});
+
+    const video = $(this).find($("video"));
+    video.trigger("stop");
+    video.css({"opacity": "0%"});
+    
+
+    $(".red-corner").css({"opacity": "0%"});
 });
