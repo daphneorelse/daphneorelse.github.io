@@ -15,7 +15,7 @@ let selected_tab = 0;
 
 $(function()
 {
-    if (this.location.pathname === "/index.html")
+    if (this.location.pathname !== "/launchcodes-download.html")
     {
         setTimeout(newTabSelected(), 100);
     }
