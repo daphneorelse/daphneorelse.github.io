@@ -17,6 +17,16 @@ $(function()
 {
     if (this.location.pathname !== "/launchcodes-download.html")
     {
+        console.log(document.location.hash);
+        if (document.location.hash === "#info")
+        {
+            selected_tab = 1;
+        }
+        else
+        {
+            selected_tab = 0;
+        }
+
         setTimeout(newTabSelected(), 100);
     }
 });
@@ -107,9 +117,11 @@ function newTabSelected()
         {
             case 0:
                 contentSection.load("../../launchcodes.html");
+                document.location.hash = "launchcodes";
                 break;
             case 1:
                 contentSection.load("../../info.html");
+                document.location.hash = "info";
                 break;
             case 2:
                 contentSection.load("../../contact.html");

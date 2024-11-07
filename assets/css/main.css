@@ -24,6 +24,7 @@
     /* --title-background: var(--dark-contrast); */
     --standard-gap: 20px;
     --small-gap: 5px;
+    --large-gap: 100px;
 }
 
 *
@@ -970,6 +971,24 @@ a
 {
     /* margin: 20px; */
     margin: var(--standard-gap);
+}
+
+.large-gap
+{
+    /* gap: 20px; */
+    gap: var(--large-gap);
+}
+
+.large-padding
+{
+    /* padding: 20px; */
+    padding: var(--large-gap);
+}
+
+.large-margin
+{
+    /* margin: 20px; */
+    margin: var(--large-gap);
 }
 
 .vertically-spaced
