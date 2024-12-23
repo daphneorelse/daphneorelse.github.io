@@ -15,9 +15,8 @@ let selected_tab = 0;
 
 $(function()
 {
-    if (this.location.pathname !== "/launchcodes-download.html")
+    if (this.location.pathname !== "/launchcodes-download/" && this.location.pathname!== "/portfolio/")
     {
-        console.log(document.location.hash);
         if (document.location.hash === "#info")
         {
             selected_tab = 1;
@@ -106,6 +105,12 @@ $("#logo-3-bounds").on("mouseleave", function()
 
 function newTabSelected()
 {
+    if (selected_tab === 2)
+    {
+        window.location.href = "../../portfolio";
+        return;
+    }
+
     let navItem = $(".nav-item").eq(selected_tab);
     $("#nav-highlight").css({"left": navItem.position().left, "width": navItem.css("width")});
 
@@ -123,17 +128,9 @@ function newTabSelected()
                 contentSection.load("../../info.html");
                 document.location.hash = "info";
                 break;
-            case 2:
-                contentSection.load("../../contact.html");
-                break;
         }
 
         contentSection.css({"opacity": 1});
-
-        if (selected_tab === 0)
-        {
-
-        }
     }, "500");
 };
 
@@ -145,8 +142,12 @@ $(".nav-item").on("mousedown", function()
         selected_tab = new_index;
         newTabSelected();
 
-        window.scrollTo({top: $("#section-divider").position().top, behavior: "smooth"});
+        if (selected_tab !== 2)
+        {
+            window.scrollTo({top: $("#section-divider").position().top, behavior: "smooth"});
+        }
     }
+
 }).on("mouseenter", function()
 {
     $(this).css({"color": css_red});
@@ -424,9 +425,174 @@ $("#content-section").on("mouseup", "#email-link", function()
 
 $("#secondary-nav-bar").on("mouseenter", function()
 {
-    $(this).find("svg").css({"fill": css_red});
+    $(this).find("svg").css({"fill": css_lightestRed});
 
 }).on("mouseleave", function()
 {
     $(this).find("svg").css({"fill": css_white});
-})
+});
+
+let crosshair_following = true;
+
+// $("#portfolio-home").on("mousemove", function(e)
+// {
+//     if (!crosshair_following)
+//     {
+//         return;
+//     }
+
+//     let vertical = $("#mouse-crosshair").children().eq(0);
+//     let horizontal = $("#mouse-crosshair").children().eq(1);
+
+//     let newX = e.pageX;
+//     let newY = e.pageY - $(this).offset().top;
+
+//     // console.log($("portfolio-home").pos);
+
+//     // vertical.attr({"x1": newX, "x2": newX});
+//     // horizontal.attr({"y1": newY, "y2": newY});
+
+//     vertical.css({"transform": "translateX(" + newX + "px"});
+//     horizontal.css({"transform": "translateY(" + newY + "px"});
+
+// }).on("mouseenter", function()
+// {
+//     $("#mouse-crosshair").css({"opacity": 100});
+
+// }).on("mouseleave", function()
+// {
+//     $("#mouse-crosshair").css({"opacity": 0});
+// });
+
+// $("#big-name").on("mouseenter", function()
+// {
+//     crosshair_following = false;
+
+//     let vertical = $("#mouse-crosshair").children().eq(0);
+//     let horizontal = $("#mouse-crosshair").children().eq(1);
+
+//     let newX = 100 + parseInt($(this).css("width")) - 108.5;  // $(this).position().left + parseInt($(this).css("width"))
+//     let newY = 100 + parseInt($(this).css("height")) - 65.5; // $(this).position().top + parseInt($(this).css("height"))
+
+//     // console.log("x: " + newX + ", y: " + newY);
+
+//     vertical.css({"transform": "translateX(" + newX + "px", "stroke": css_lightestRed, "stroke-width": "9"});
+//     horizontal.css({"transform": "translateY(" + newY + "px", "stroke": css_lightestRed, "stroke-width": "9"});
+
+// }).on("mouseleave", function()
+// {
+//     crosshair_following = true;
+
+//     let vertical = $("#mouse-crosshair").children().eq(0);
+//     let horizontal = $("#mouse-crosshair").children().eq(1);
+
+//     vertical.css({"stroke": css_white, "stroke-width": "4"});
+//     horizontal.css({"stroke": css_white, "stroke-width": "4"});
+// });
+
+$(".corner-target").on("mouseenter", function()
+{
+    let corners = $(".corner");
+
+    let area = $(this);
+    let cornerOffset = $(".corner").outerWidth() / 2;
+
+    let left = area.offset().left - cornerOffset;
+    let right = left + area.outerWidth();
+    let top = area.offset().top - cornerOffset;
+    let bottom = top + area.outerHeight();
+
+    
+    corners.css({"stroke": css_lightestRed});
+    corners.eq(0).css({"left": left, "top": top});
+    corners.eq(1).css({"left": right, "top": top});
+    corners.eq(2).css({"left": right, "top": bottom});
+    corners.eq(3).css({"left": left, "top": bottom});
+    
+    // corners.addClass("corner-red");
+    // corners.find("path").css({"stroke-width": "30"});
+
+}).on("mouseleave", function()
+{
+    // $(".corner").removeClass("corner-red");
+    $(".corner").css({"stroke": css_white});
+    $(".corner").find("path").css({"stroke-width": "20"});
+
+}).on("mousedown", function()
+{
+    $(".corner").find("path").css({"stroke-width": "35"});
+
+}).on("mouseup", function()
+{
+    $(".corner").find("path").css({"stroke-width": "20"});
+});
+
+let sight_grown = false;
+
+$("#shooting-gallery").on("mousemove", function(e)
+{
+    let sight = $("#gallery-sight");
+
+    let offset = sight.outerWidth() / 2;
+
+    sight.css({"left": e.offsetX - offset, "top": e.offsetY - offset});
+
+}).on("mouseenter", function()
+{
+    let sight = $("#gallery-sight").find("svg").eq(1);
+    // sight.removeClass("blur-3p");
+    sight.css({"backdrop-filter": "blur(0px)"});
+
+}).on("mouseleave", function()
+{
+    let sight = $("#gallery-sight");
+    sight.css({"left": "calc(50% - 90px)", "top": "calc(50% - 90px)"});
+    // sight.find("svg").eq(1).addClass("blur-3p");
+    sight.find("svg").eq(1).css({"backdrop-filter": "blur(3px)"});
+
+    if (sight_grown)
+    {
+        sight.find("svg").css({"transform": "scale(1)"});
+        sight_grown = false;
+    }
+
+}).on("mousedown", function()
+{
+    let sight = $("#gallery-sight").find("svg");
+
+    if (sight_grown)
+    {
+        sight.css({"transform": "scale(1)"});
+        sight_grown = false;
+    }
+    else
+    {
+        sight.css({"transform": "scale(2)"});
+        sight_grown = true;
+    }
+
+});
+
+$("#portfolio-profile-pic").on("mouseenter", function()
+{
+    $("#shifting-container").addClass("rotate-container");
+
+}).on("mouseleave", function()
+{
+    $("#shifting-container").removeClass("rotate-container");
+    
+});
+
+$(".inspiration-name").on("mouseenter", function()
+{
+    $(".inspiration-box").removeClass("visible");
+    // $(this).find(".inspiration-box").addClass("visible");
+    let index = $(".inspiration-name").index($(this));
+    console.log(index);
+    $(".inspiration-box").eq(index).addClass("visible");
+});
+
+$("#inspirations").on("mouseleave", function()
+{
+    $(".inspiration-box").removeClass("visible");
+});

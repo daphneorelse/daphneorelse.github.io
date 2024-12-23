@@ -7,6 +7,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
+        <svg class="corner" viewBox="0 0 84 84" fill="none" stroke="#FF5252" xmlns="http://www.w3.org/2000/svg">
+            <path d="M84 10H10V84" stroke-width="20"/>
+        </svg>
+        <svg class="corner" viewBox="0 0 84 84" fill="none" stroke="#FF5252" style="transform: rotate(90deg)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M84 10H10V84" stroke-width="20"/>
+        </svg>
+        <svg class="corner" viewBox="0 0 84 84" fill="none" stroke="#FF5252" style="transform: rotate(180deg)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M84 10H10V84" stroke-width="20"/>
+        </svg>
+        <svg class="corner" viewBox="0 0 84 84" fill="none" stroke="#FF5252" style="transform: rotate(270deg)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M84 10H10V84" stroke-width="20"/>
+        </svg>
+            
         <div style="height: 100px" class="width-100 white-background">
             <div id="secondary-nav-bar">
                 <a href="../index.html">
@@ -17,9 +30,40 @@
             </div>
         </div>
         <div id="portfolio-home">
-            <p class="huge-text">Daphne Wilkerson</p>
-            <p>hello hello portfolio-core</p>
-            <div class="link-button">stuff</div>
+            <!-- <svg id="mouse-crosshair" class="absolute width-100p height-100p" stroke="#ffffff">
+                <line x1="0" y1="0%" x2="0" y2="100%" stroke-width="4" />
+                <line x1="0%" y1="0" x2="100%" y2="0" stroke-width="4" />
+            </svg> -->
+            
+            <div class="portfolio-container">
+                
+                <p id="big-name" class="fit-width corner-target" style="font-size: 130px">
+                    Daphne Wilkerson
+                </p>
+                <div id="shooting-gallery" class="corner-target tool-border">
+                    <div id="gallery-sight">
+                        <svg style="z-index: 5;" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M267 137.5C267 209.021 209.021 267 137.5 267C65.9791 267 8 209.021 8 137.5C8 65.9791 65.9791 8 137.5 8C209.021 8 267 65.9791 267 137.5Z" fill="#DCECDF"/>
+                        </svg>
+                        <svg style="z-index: 11;" class="blur-3p" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M267 137.5C267 209.021 209.021 267 137.5 267M267 137.5C267 65.9791 209.021 8 137.5 8M267 137.5H8M137.5 267C65.9791 267 8 209.021 8 137.5M137.5 267V8M8 137.5C8 65.9791 65.9791 8 137.5 8" stroke="white" stroke-width="5"/>
+                        </svg>
+                    </div>
+                    
+                    <p>
+                        <span class="moving-text-line">Laser precision, open ears, perfect vision, troublemaker,</span>
+                        <span class="moving-text-line" style="animation-delay: 500ms">design junkie, mystery solving, art kid, hopeless romantic,</span>
+                        <span class="moving-text-line" style="animation-delay: 1s">DIY-or-bust, <i>"but why?"</i>, certain je-sais-quoi, perpetual novice,</span>   
+                        <span class="relative" style="animation-delay: 1.5s; float: right">new perspective.</span>
+                    </p>
+                    
+                </div>
+                <p class="corner-target fit-width">
+                    Design means a lot to me, and it's what I'll be doing my whole life.
+                </p>
+                <div class="link-button corner-target">stuff</div>
+            </div>
+            
         </div>
         <div class="portfolio-feature">
             <div class="feature-title-line">
@@ -27,14 +71,162 @@
                 <p>Melody Meadows</p>
             </div>
             <div>
-                <p>Music education for ADHD learners</p>
+                <p>Friendly and fun music education on the go</p>
             </div>
         </div>
         <div class="portfolio-feature">
-            
+            <div class="feature-title-line">
+                <svg viewBox="0 0 103 67" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.8833 5.1748H17.8833L0.925781 60.6405H36.9258L39.2648 52.99H11.2648L25.8833 5.1748Z"/>
+                    <path d="M51.3284 33.4706C54.7193 22.3794 66.8702 13.3882 78.4682 13.3882C84.4068 13.3882 89.0448 15.7406 91.7095 19.5342L93.6438 22.2881L101.027 16.9783L99.0922 14.2244C95.4205 8.99701 89.0066 5.73779 80.8072 5.73779C64.7909 5.73779 48.0111 18.1542 43.3284 33.4706C38.6457 48.7871 47.8334 61.2035 63.8496 61.2035C72.0491 61.2035 80.4558 57.9443 87.3239 52.7169L90.9421 49.963L86.8061 44.6532L83.1879 47.407C78.2036 51.2007 72.1272 53.553 66.1886 53.553C54.5906 53.553 47.9375 44.5618 51.3284 33.4706Z"/>
+                    <path id="crosshair" style="transition: fill 250ms" fill-rule="evenodd" clip-rule="evenodd" d="M79.9251 18.4383L85.5623 0H79.5623L73.9251 18.4383C67.1376 19.6049 60.5872 24.4519 57.4872 30.6018H38.2064L36.4521 36.3396H55.7329C55.0726 42.4894 58.6592 47.3364 64.7334 48.503L59.0963 66.9413H65.0963L70.7334 48.503C77.5209 47.3364 84.0713 42.4894 87.1714 36.3396H100.952L102.706 30.6018H88.9256C89.5859 24.4519 85.9993 19.6049 79.9251 18.4383ZM72.1191 24.3454C68.7235 25.2795 65.5503 27.6276 63.6642 30.6018H70.2064L72.1191 24.3454ZM76.2064 30.6018L78.1191 24.3454C80.9436 25.2795 82.6811 27.6276 82.7486 30.6018H76.2064ZM68.4521 36.3396H61.91C61.9775 39.3138 63.7149 41.6618 66.5394 42.5959L68.4521 36.3396ZM72.5394 42.5959L74.4521 36.3396H80.9943C79.1082 39.3138 75.9351 41.6618 72.5394 42.5959Z"/>
+                </svg>     
+                <p>LaunchCodes</p>
+            </div>
+            <div>Musically assured destruction</p>
+            </div>
         </div>
         <div class="portfolio-feature">
-            
+            <div class="feature-title-line">
+                <img src="assets/images/coco logo.svg" alt="CoCo Logo">
+                <p>CoCo</p>
+            </div>
+            <div>
+                <p>Your ethical shopping companion</p>
+            </div>
+        </div>
+        <div class="portfolio-feature">
+            <div class="feature-title-line">
+                <img src="assets/images/hotpotato icon.svg" alt="HotPotato Icon">
+                <p>HotPotato</p>
+            </div>
+            <div>
+                <p>AI workout designer, for taking you from CouchPotato to HotPotato</p>
+            </div>
+        </div>
+        <div id="portfolio-about">
+            <div class="portfolio-container align-center">
+                <div class="flex-row medium-gap relative medium-padding light-green-background">
+                    <div class="absolute blur-6p" style="width: 110%; height: 120%; left: -30px; top: -30px"></div>
+                    <div id="shifting-container" class="tool-border"></div>
+                    <img class="corner-target" id="portfolio-profile-pic" style="width: 150px; height: 150px; position: absolute; top: 40px; left: 40px" src="../assets/images/red head.JPG" alt="My Face">
+                    <p class="large-text relative z-10">
+                        I don't bite &#58;&#41
+                    </p>
+                </div>
+                <div class="medium-content-width flex-column medium-gap align-start">
+                    <p>
+                        I'm a UI/UX designer from San Diego, California, and I'll first tell you about the things that inspire me.
+                    </p>
+                    <div id="inspirations" class="flex-column align-start medium-gap">
+                        <div>
+                            <div class="inspiration-name corner-target">
+                                Music
+                            </div>
+                            <div class="inspiration-name corner-target">
+                                Art
+                            </div>
+                            <div class="inspiration-name corner-target">
+                                Fashion
+                            </div>
+                            <div class="inspiration-name corner-target">
+                                Martial Arts
+                            </div>
+                        </div>
+                        <div class="inspiration-box">
+                            <p>
+                                All of my artistic sensibilities come from music. My love of mixing, sound design, and world-building is what drives all my work, no matter the medium.
+                            </p>
+                            <div class="inspiration-feature">
+                                <img src="assets/images/vulnicura.png" alt="Vulnicura cover by Björk">
+                                <div class="inspiration-description">
+                                    <div class="link-button">Björk — Vulnicura</div>
+                                    <p>
+                                        As easy as it is to call her my favorite musician, Björk will always truly be my favorite experience designer.
+                                        Her holistic approach to art covers nearly everything—DIY music composition, cutting-edge live music productions, considered graphic design, and emotional clarity, all distilled into heartbreaking perfection on her eighth project, Vulnicura.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                            <div class="inspiration-feature">
+                                <img src="assets/images/drukqs.png" alt="Drukqs cover by Aphex Twin">
+                                <div class="inspiration-description">
+                                    <div class="link-button">Aphex Twin — Drukqs</div>
+                                    <p>
+                                        Not only is this very possibly my most played album of all time, what I love most is the story behind it's release.
+                                        James had no intent to release any of the music on this project, but only after mistakenly leaving a MP3 player on a plane with all these songs did he consider a release, only to beat any potential leaks.
+                                        The music is kinetic, haunting, often exhilerating, and reminds me to just put my work out there, regardless of whether I think it's good enough or not.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inspiration-box">
+                            <p>
+                                
+                            </p>
+                            <div class="inspiration-feature">
+                                <img src="assets/images/vulnicura.png" alt="Vulnicura cover by Björk">
+                                <div class="inspiration-description">
+                                    <div class="link-button">Björk — Vulnicura</div>
+                                    <p>
+                                        
+                                    </p>
+                                </div>
+                                
+                            </div>
+                            <div class="inspiration-feature">
+                                <img src="assets/images/drukqs.png" alt="Drukqs cover by Aphex Twin">
+                                <div class="inspiration-description">
+                                    <div class="link-button">Aphex Twin — Drukqs</div>
+                                    <p>
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inspiration-box">
+                            <p>
+                                Though it's the medium I know the least about vis-à-vis technique, I experience fashion just as viscerally as thunderous music or heart-wrenching film.
+                                What I appreciate about this kind of world-building is that, ultimately, it must reside on the human body, and coming to terms with this constraint is what allows for genius design.
+                            </p>
+                            <div class="inspiration-feature">
+                                <img src="assets/images/horn of plenty 2.jpeg" alt="Horn of Plenty by Alexander McQueen">
+                                <div class="inspiration-description">
+                                    <a href="https://www.youtube.com/watch?v=er20fZrHzUc&ab_channel=selgi14" target="_blank"><div class="link-button">Alexander McQueen — Horn of Plenty FW09</div></a>
+                                    <p>
+                                        What makes McQueen my favorite designer is truly his love and appreciation of women, and his masterful tailoring which always showed reverence of the human form beneath.
+                                        This 2009 collection, dubbed <i>Horn of Plenty: Everything But the Kitchen Sink</i>, commented upon the growing beast of fast fashion and the piles of trash that clothes were becoming.
+                                        In these clothes I see the surface details, like houndstooth run amok, clown-like beauty, powerful white, black, and red—but above all, I see the women beneath.
+                                        Armored, decorated, feathered, and transformed, wearing McQueen makes a woman mythical, terrifying, and somehow still human.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                            <div class="inspiration-feature">
+                                <img src="assets/images/courreges 2.webp" alt="FW23 by Courrèges">
+                                <div class="inspiration-description">
+                                    <a href="https://www.courreges.com/us/pages/defile-collection-automne-hiver-23" target="_blank"><div class="link-button">Courrèges — FW23</div></a>
+                                    <p>
+                                        Nicolas di Felice, creative director of French legacy fashion house Courrèges since 2020, is my favorite living designer because of his ability to transform a brand.
+                                        Courrèges as a house had seen its heyday in the 60s, when its futurist vision of fashion-to-come became pervasive, touting geometric cuts, surprising mini-skirts, and space-age design philosophy.
+                                        Tasked with bringing a retro-futurist vision <i>literally</i> into the future, Felice excels.
+                                        He embraces vintage, gemotric cuts and transforms it for the modern woman, while still remaining forward-thinking.
+                                        Fall/Winter 2023 features lighting from a phone screen, showing how Felice is always meditating on how technology shapes the way we see ourselves.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Studying Human-Computer Interaction at Stanford was cool. I learned a ton. Most importantly, I figured out that most of the learning I have to do is still ahead of me.
+                    </p>
+                    <p>
+                        It's cheesy, but my work is also my play. Getting to the bottom of a needfinding interview, dreaming big in solution ideation, piecing together a wireframe, smoothing over a usability critique... 
+                        I treat it like a good mystery where I play detective, where a little madness goes a long way, and the best design for the problem is rarely the most obvious suspect.
+                    </p>
+                </div>
+                
+            </div>
         </div>
         <div id="footer">
             <div class="medium-margin">
