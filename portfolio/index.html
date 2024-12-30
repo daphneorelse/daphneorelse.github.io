@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Portfolio</title>
+        <title>Daphne Wilkerson</title>
         <link rel="stylesheet" href="../assets/css/main.css">
         <link rel="shortcut icon" href="../assets/images/favicon.ico"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" async></script>
+        <script src="../assets/js/app.js" async></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script> -->
     </head>
     <body>
         <svg class="corner" viewBox="0 0 84 84" fill="none" stroke="#FF5252" xmlns="http://www.w3.org/2000/svg">
@@ -66,43 +68,337 @@
             
         </div>
         <div class="portfolio-feature">
-            <div class="feature-title-line">
-                <img src="assets/images/melody meadows icon.webp" alt="Melody Meadows Icon">
-                <p>Melody Meadows</p>
+            <div class="feature-basics">
+                <div class="feature-title-line">
+                    <!-- <div class="icon-background"> -->
+                        <img src="assets/images/melody meadows icon.webp" alt="Melody Meadows Icon">
+                    <!-- </div> -->
+                    
+                    <p>Melody Meadows</p>
+                </div>
+                
+                <div>
+                    <p class="medium-text">Friendly and fun music education on the go</p>
+                </div>
+                <div class="feature-tags">
+                    <p>UI/UX</p>
+                    <p>User Research</p>
+                    <p>Product Design</p>
+                    <p>Website Design</p>
+                    <p>Social Network Design</p>
+                </div>
+                <div class="feature-description">
+                    <p>
+                        Melody Meadows was conceptualized as an instrument-learning platform designed specifically for users with attention disorders. 
+                    </p>
+                    <p>
+                        With an immersive, customizable world, punchy lesson flows, a highly visible recommendation system, and the power to learn with friends, our target users felt easily inspired to meet their goals.
+                    </p>
+                    <div class="flex-row medium-gap" style="margin-top: 10px">
+                        <p>Learn more: </p>
+                        <a href="https://web.stanford.edu/class/cs377e/projects/MelodyMeadow/" target="_blank"><div class="link-button corner-target">Design Process</div></a>
+                        <a href="https://www.figma.com/proto/QMR7OYM3rbZLbVBBuhT4n7/Med-Fi?page-id=0%3A1&type=design&node-id=7-191&viewport=-1482%2C-2052%2C0.55&scaling=min-zoom&starting-point-node-id=7%3A191&show-proto-sidebar=1&t=0Cskh4n7lcq2q8m3-1" target="_blank"><div class="link-button corner-target">Try the Prototype</div></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>Friendly and fun music education on the go</p>
+            <div class="feature-menu">
+                <div>
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Preview</p>
+                    </div>
+                    <div class="feature-gallery">
+                        <img src="assets/melody meadows/practice technique.png" alt="Practicing Technique">
+                        <img src="assets/melody meadows/favorite pieces.png" alt="Favorite Pieces">
+                        <img src="assets/melody meadows/technique selection.png" alt="Technique Selection">
+                        <img src="assets/melody meadows/practice piece.png" alt="Practicing a Piece">
+                        <img src="assets/melody meadows/friends.png" alt="Friends">
+                        <img src="assets/melody meadows/visit friend.png" alt="Visiting a Friend">
+                        <img src="assets/melody meadows/select piece.png" alt="Selecting a Piece">
+                        <img src="assets/melody meadows/select part.png" alt="Selecting a Part">
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Roadmap</p>
+                    </div>
+                    <div class="feature-gallery">
+                        <div>
+                            <h2>1. Background Research</h2>
+                            <p>In choosing a problem space such as music education for attention-disordered students, our literature review indicated game-ification and social networking were promising angles with which to design a solution.</p>
+                        </div>
+                        <div>
+                            <h2>2. Needfinding</h2>
+                            <p>Talking to several ADHD musicians taught us more about existing tools and habits they use to deepen and lengthen their music learning.</p>
+                        </div>
+                        <div>
+                            <h2>3. Solution Ideation</h2>
+                            <p>By building several POVs of our needfinding subjects, we considered a wide solution space including matchmaking systems, productivity software, and RPG games.</p>
+                        </div>
+                        <div>
+                            <h2>4. Experience Prototypes</h2>
+                            <p>Based on our early-stage proposed solution, we formulated several experiments with ADHD musicians testing questions we have about our solution space:</p>
+                            <ul>
+                                <li>How long do they like spending to learn music?</li>
+                                <li>How easily can they achieve a "flow state"?</li>
+                                <li>Are they affected by "choice paralysis" when practicing music?</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>5. Low-Fi Prototype</h2>
+                            <p>
+                                Upon testing our assumptions, we chose <b>Melody Meadows</b> for its promise in achieving user flow states and helping users become invested in their learning.
+                                Our first prototype focused on three tasks flows:
+                            </p>
+                            <ol>
+                                <li>Learning a technique</li>
+                                <li>Playing a song</li>
+                                <li>Playing music with a friend</li>
+                            </ol>
+                            <p>Observing new subjects using this prototype showed us they became invested in the characters, but wanted more customizability in their lessons.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="border-bottom: none">
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Style Guide</p>
+                    </div>
+                    <div class="menu-content">
+                        <img src="assets/melody meadows/melody meadows style guide.png" alt="Style Guide for Melody Meadows">
+                    </div>
+                </div>
             </div>
+            <svg class="expand-icon" viewBox="0 0 349 175" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.322266 0.947754H71.0329L174.27 104.185L277.508 0.947797H348.218L174.271 174.896L0.322266 0.947754Z"/>
+            </svg>
+                
         </div>
         <div class="portfolio-feature">
-            <div class="feature-title-line">
-                <svg viewBox="0 0 103 67" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25.8833 5.1748H17.8833L0.925781 60.6405H36.9258L39.2648 52.99H11.2648L25.8833 5.1748Z"/>
-                    <path d="M51.3284 33.4706C54.7193 22.3794 66.8702 13.3882 78.4682 13.3882C84.4068 13.3882 89.0448 15.7406 91.7095 19.5342L93.6438 22.2881L101.027 16.9783L99.0922 14.2244C95.4205 8.99701 89.0066 5.73779 80.8072 5.73779C64.7909 5.73779 48.0111 18.1542 43.3284 33.4706C38.6457 48.7871 47.8334 61.2035 63.8496 61.2035C72.0491 61.2035 80.4558 57.9443 87.3239 52.7169L90.9421 49.963L86.8061 44.6532L83.1879 47.407C78.2036 51.2007 72.1272 53.553 66.1886 53.553C54.5906 53.553 47.9375 44.5618 51.3284 33.4706Z"/>
-                    <path id="crosshair" style="transition: fill 250ms" fill-rule="evenodd" clip-rule="evenodd" d="M79.9251 18.4383L85.5623 0H79.5623L73.9251 18.4383C67.1376 19.6049 60.5872 24.4519 57.4872 30.6018H38.2064L36.4521 36.3396H55.7329C55.0726 42.4894 58.6592 47.3364 64.7334 48.503L59.0963 66.9413H65.0963L70.7334 48.503C77.5209 47.3364 84.0713 42.4894 87.1714 36.3396H100.952L102.706 30.6018H88.9256C89.5859 24.4519 85.9993 19.6049 79.9251 18.4383ZM72.1191 24.3454C68.7235 25.2795 65.5503 27.6276 63.6642 30.6018H70.2064L72.1191 24.3454ZM76.2064 30.6018L78.1191 24.3454C80.9436 25.2795 82.6811 27.6276 82.7486 30.6018H76.2064ZM68.4521 36.3396H61.91C61.9775 39.3138 63.7149 41.6618 66.5394 42.5959L68.4521 36.3396ZM72.5394 42.5959L74.4521 36.3396H80.9943C79.1082 39.3138 75.9351 41.6618 72.5394 42.5959Z"/>
-                </svg>     
-                <p>LaunchCodes</p>
+            <div class="feature-basics">
+                <div class="feature-title-line">
+                    <svg viewBox="0 0 103 67" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.8833 5.1748H17.8833L0.925781 60.6405H36.9258L39.2648 52.99H11.2648L25.8833 5.1748Z"/>
+                        <path d="M51.3284 33.4706C54.7193 22.3794 66.8702 13.3882 78.4682 13.3882C84.4068 13.3882 89.0448 15.7406 91.7095 19.5342L93.6438 22.2881L101.027 16.9783L99.0922 14.2244C95.4205 8.99701 89.0066 5.73779 80.8072 5.73779C64.7909 5.73779 48.0111 18.1542 43.3284 33.4706C38.6457 48.7871 47.8334 61.2035 63.8496 61.2035C72.0491 61.2035 80.4558 57.9443 87.3239 52.7169L90.9421 49.963L86.8061 44.6532L83.1879 47.407C78.2036 51.2007 72.1272 53.553 66.1886 53.553C54.5906 53.553 47.9375 44.5618 51.3284 33.4706Z"/>
+                        <path id="crosshair" style="transition: fill 250ms" fill-rule="evenodd" clip-rule="evenodd" d="M79.9251 18.4383L85.5623 0H79.5623L73.9251 18.4383C67.1376 19.6049 60.5872 24.4519 57.4872 30.6018H38.2064L36.4521 36.3396H55.7329C55.0726 42.4894 58.6592 47.3364 64.7334 48.503L59.0963 66.9413H65.0963L70.7334 48.503C77.5209 47.3364 84.0713 42.4894 87.1714 36.3396H100.952L102.706 30.6018H88.9256C89.5859 24.4519 85.9993 19.6049 79.9251 18.4383ZM72.1191 24.3454C68.7235 25.2795 65.5503 27.6276 63.6642 30.6018H70.2064L72.1191 24.3454ZM76.2064 30.6018L78.1191 24.3454C80.9436 25.2795 82.6811 27.6276 82.7486 30.6018H76.2064ZM68.4521 36.3396H61.91C61.9775 39.3138 63.7149 41.6618 66.5394 42.5959L68.4521 36.3396ZM72.5394 42.5959L74.4521 36.3396H80.9943C79.1082 39.3138 75.9351 41.6618 72.5394 42.5959Z"/>
+                    </svg>     
+                    <p>LaunchCodes</p>
+                </div>
+                
+                <div>
+                    <p class="medium-text">Musically assured destruction</p>
+                </div>
+                <div class="feature-tags">
+                    <p>UI/UX</p>
+                    <p>Product Design</p>
+                    <p>Software Development</p>
+                    <p>Website Design</p>
+                    <p>Branding</p>
+                </div>
+                <div class="feature-description">
+                    <p>
+                        LaunchCodes is an audio production plugin for synthesizing explosive sounds, built with Juce/C++. 
+                    </p>
+                    <p>
+                        As my most ambitious project to date, I've endeavored to create a state-of-the-art music making experience and workflow that balances efficiency, responsiveness, and beauty.
+                        Inspired by nuclear and naval command controls, its interface is entirely original, as are the real-time audio processing algorithms powering it.
+                    </p>
+                    <div class="flex-row medium-gap" style="margin-top: 10px">
+                        <p>Learn more: </p>
+                        <a href="../" target="_blank"><div class="link-button corner-target">Website</div></a>
+                        <a href="../launchcodes-download" target="_blank"><div class="link-button corner-target">Get LaunchCodes</div></a>
+                    </div>
+                </div>
             </div>
-            <div>Musically assured destruction</p>
+            <div class="feature-menu">
+                <div>
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Preview</p>
+                    </div>
+                    <div class="feature-gallery">
+                        
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Roadmap</p>
+                    </div>
+                    <div class="height-100p medium-padding light-green-background">
+                        <p>
+                            text on background
+                        </p>
+                    </div>
+                </div>
+                <div style="border-bottom: none">
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Style Guide</p>
+                    </div>
+                    <div class="height-100p medium-padding light-green-background">
+                        
+                    </div>
+                </div>
             </div>
+            <svg class="expand-icon" viewBox="0 0 349 175" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.322266 0.947754H71.0329L174.27 104.185L277.508 0.947797H348.218L174.271 174.896L0.322266 0.947754Z"/>
+            </svg>
         </div>
         <div class="portfolio-feature">
-            <div class="feature-title-line">
-                <img src="assets/images/coco logo.svg" alt="CoCo Logo">
-                <p>CoCo</p>
+            <div class="feature-basics">
+                <div class="feature-title-line">
+                    <img src="assets/images/coco logo.svg" alt="CoCo Logo">
+                    <p>CoCo</p>
+                </div>
+                <div>
+                    <p>Your ethical shopping companion</p>
+                </div>
+                <div class="feature-tags">
+                    <p>UI/UX</p>
+                    <p>User Research</p>
+                    <p>Product Design</p>
+                    <p>Website Design</p>
+                </div>
+                <div class="feature-description">
+                    <p>
+                        Melody Meadows was designed specifically with low-attention span users in mind.
+                    </p>
+                    <div class="flex-row small-gap">
+                        <div class="link-button">Website</div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>Your ethical shopping companion</p>
+            <div class="feature-menu">
+                <div>
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Preview</p>
+                    </div>
+                    <div class="feature-gallery">
+                        
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Roadmap</p>
+                    </div>
+                    <div class="height-100p medium-padding light-green-background">
+                        <p>
+                            text on background
+                        </p>
+                    </div>
+                </div>
+                <div style="border-bottom: none">
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Style Guide</p>
+                    </div>
+                    <div class="height-100p medium-padding light-green-background">
+                        
+                    </div>
+                </div>
             </div>
+            <svg class="expand-icon" viewBox="0 0 349 175" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.322266 0.947754H71.0329L174.27 104.185L277.508 0.947797H348.218L174.271 174.896L0.322266 0.947754Z"/>
+            </svg>
         </div>
         <div class="portfolio-feature">
-            <div class="feature-title-line">
-                <img src="assets/images/hotpotato icon.svg" alt="HotPotato Icon">
-                <p>HotPotato</p>
+            <div class="feature-basics">
+                <div class="feature-title-line">
+                    <img src="assets/images/hotpotato icon.svg" alt="HotPotato Icon">
+                    <p>HotPotato</p>
+                </div>
+                <div>
+                    <p>AI workout designer taking you from CouchPotato to HotPotato</p>
+                </div>
+                <div class="feature-tags">
+                    <p>UI/UX</p>
+                    <p>Product Design</p>
+                    <p>Software Development</p>
+                    <p>Social Network Design</p>
+                </div>
+                <div class="feature-description">
+                    <p>
+                        Melody Meadows was designed specifically with low-attention span users in mind.
+                    </p>
+                    <div class="flex-row small-gap">
+                        <div class="link-button">Website</div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>AI workout designer, for taking you from CouchPotato to HotPotato</p>
+            <div class="feature-menu">
+                <div>
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Preview</p>
+                    </div>
+                    <div class="feature-gallery">
+                        
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Roadmap</p>
+                    </div>
+                    <div class="height-100p medium-padding light-green-background">
+                        <p>
+                            text on background
+                        </p>
+                    </div>
+                </div>
+                <div style="border-bottom: none">
+                    <div class="menu-item-bar">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <p>Style Guide</p>
+                    </div>
+                    <div class="height-100p medium-padding light-green-background">
+                        
+                    </div>
+                </div>
             </div>
+            <svg class="expand-icon" viewBox="0 0 349 175" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.322266 0.947754H71.0329L174.27 104.185L277.508 0.947797H348.218L174.271 174.896L0.322266 0.947754Z"/>
+            </svg>
         </div>
         <div id="portfolio-about">
             <div class="portfolio-container align-center">
@@ -250,6 +546,6 @@
                 </p>
             </div>
         </div>
-        <script src="../assets/js/app.js"></script>
+       
     </body>
 </html>

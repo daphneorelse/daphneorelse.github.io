@@ -828,7 +828,8 @@ a
     position: absolute;
     left: 0px;
     top: 0px;
-    stroke: var(--white);
+    opacity: 0%;
+    stroke: var(--lightest-red);
     /* position: fixed; */
     /* left: 50px; */
     /* top: 50px; */
@@ -859,6 +860,7 @@ a
     position: relative;
     /* overflow: hidden; */
     background-clip: padding-box;
+    cursor: crosshair;
 }
 
 #shooting-gallery p
@@ -936,36 +938,297 @@ a
 .portfolio-feature
 {
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
+    height: 300px;
     background-color: var(--light-green);
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 40px;
     padding: 50px;
     box-sizing: border-box;
     border-top: 3px solid var(--dark-contrast);
+    transition: 500ms;
+    /* cursor: pointer; */
+    position: relative;
+}
+
+.feature-basics
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* flex-shrink: 0; */
+    /* background-color: var(--medium-green); */
+}
+
+/* .feature-tags
+{
+    font-size: 13px;
+} */
+
+.feature-tags p
+{
+    display: inline-block;
+    padding: 7px;
+    border-radius: 20px;
+    border: 3px solid var(--white);
+    /* border: 3px solid var(--dark-contrast); */
+    background-color: var(--lightest-gray);
+    margin-right: var(--small-gap);
+    margin-bottom: var(--small-gap);
+    transition: 500ms;
+    font-size: 13px;
 }
 
 .feature-title-line
 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: start; */
+    /* align-items: start; */
     gap: var(--standard-gap);
-    height: 75px;
-    width: fit-content;
+    /* height: 75px; */
+    /* width: fit-content; */
+    /* padding-bottom: 5px; */
+    /* border-bottom: 4px dashed var(--dark-contrast); */
+    /* background-color: var(--medium-green); */
 }
+
+/* .feature-title-line p
+{
+    background-color: var(--white);
+} */
 
 .feature-title-line img, .feature-title-line svg
 {
-    height: 100%;
+    height: 70px;
+    /* backdrop-filter: blur(2px); */
+    margin-bottom: 10px;
+    /* padding: 10px;
+    position: relative;
+    left: -5px;
+    top: -5px; */
+    /* box-sizing: border-box; */
+    /* background-color: red; */
 }
+
+/* .icon-background
+{
+    background-color: var(--light-green);
+    height: 95px;
+    width: 95px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 5px solid var(--light-green);
+    transition: border-color 500ms;
+} */
 
 .feature-title-line p
 {
     margin-top: -10px;
     font-size: 75px;
+    border-left: 4px dashed var(--dark-contrast);
+    padding-left: 12px;
+}
+
+.feature-description
+{
+    margin-top: 30px;
+    opacity: 0%;
+    /* width: 40%; */
+    position: relative;
+    left: -20px;
+    transition-property: left opacity;
+    transition-duration: 500ms;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* background-color: var(--light-green); */
+    /* border-top: 3px dashed var(--dark-contrast); */
+    padding-top: 8px;
+    padding-left: 8px;
+    /* margin-left: var(--standard-gap); */
+    /* transition-delay: 200ms; */
+    border-top: 17px solid transparent;
+    border-left: 17px solid transparent;
+    border-image: url(../images/tool\ border\ dark\ contrast.png) 25% round;
+    /* pointer-events: none; */
+    max-width: 700px;
+    width: 40vw;
+}
+
+/* .fade-in
+{
+    animation: fade-in-from-left 1s ease 250ms forwards;
+}
+
+@keyframes fade-in-from-left {
+    0%
+    {
+        left: -20px;
+        opacity: 0%;
+    }
+    100%
+    {
+        left: 0px;
+        opacity: 100%;
+    }
+} */
+
+.feature-gallery
+{
+    display: flex;
+    flex-direction: row;
+    gap: var(--standard-gap);
+    align-items: center;
+    height: 350px;
+    /* width: 400px; */
+    /* background-color: var(--light-green); */
+    /* border: 3px solid var(--lightest-gray); */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    font-size: 13px;
+    padding: var(--standard-gap);
+}
+
+.feature-gallery > img
+{
+    height: 100%;
+    border: 3px solid var(--dark-contrast);
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.feature-gallery > div
+{
+    /* height: fit-content; */
+    min-width: 200px;
+    border: 3px solid var(--dark-contrast);
+    padding: var(--standard-gap);
+    /* box-sizing: border-box; */
+    background-color: var(--lightest-gray);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: var(--standard-gap);
+    /* font-size: 13px; */
+    /* overflow-y: scroll; */
+}
+/* 
+.feature-gallery > div > p
+{
+    margin-top: 20px;
+} */
+
+.feature-gallery > div > ul, .feature-gallery > div > ol
+{
+    /* margin-top: 20px; */
+    padding-left: 20px;
+}
+
+.feature-menu
+{
+    max-width: 300px;
+    width: 50%;
+    height: fit-content;
+    border: 3px solid var(--lightest-gray);
+    /* background-clip: padding-box; */
+    background-color: var(--white);
+    /* user-select: none; */
+    transition: 500ms;
+    position: relative;
+    /* left: -20px;
+    opacity: 0%; */
+}
+
+.feature-menu > div
+{
+    border-bottom: 3px dashed var(--lightest-gray);
+    /* background-color: var(--white); */
+    /* background-clip: border-box; */
+    height: 32px;
+    overflow-y: hidden;
+    transition: 500ms;
+}
+
+.menu-item-bar
+{
+    display: flex;
+    border-bottom: 3px dashed var(--dark-contrast);
+    transition: border-color 500ms;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--small-gap);
+    /* font-size: 20px; */
+    padding: var(--small-gap);
+    cursor: pointer;
+    /* background-color: var(--white); */
+    box-sizing: border-box;
+    /* height: 45px; */
+}
+
+.more-icon
+{
+    height: 12px;
+    padding: var(--small-gap);
+}
+
+.more-icon path
+{
+    transition: transform 250ms;
+    transform-origin: 50% 50%;
+}
+
+.menu-content
+{
+    height: 390px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.menu-content > *
+{
+    height: 100%;
+}
+
+.expand-icon
+{
+    height: 12px;
+    position: absolute;
+    bottom: 0px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    /* opacity: 0%; */
+    fill: var(--lightest-gray);
+    transition: 500ms;
+    /* transform: scaleY(1); */
+    cursor: pointer;
+}
+
+.bouncing
+{
+    /* opacity: 100%; */
+    animation: bounce 1s forwards infinite;
+}
+
+@keyframes bounce {
+    0%
+    {
+        bottom: 0px;
+    }
+    50%
+    {
+        bottom: 6px;
+    }
+    100%
+    {
+        bottom: 0px;
+    }
 }
 
 #portfolio-about
@@ -1532,6 +1795,11 @@ a
     scroll-snap-align: center;
     scroll-snap-stop: always;
 } */
+
+.hide-overflow-x
+{
+    overflow-x: hidden;
+}
 
 .red-gradient
 {
