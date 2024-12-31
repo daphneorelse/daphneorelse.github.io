@@ -600,7 +600,9 @@ function toggleMore(section, select)
     {
         $(section).prop("open", true);
         icon.find("path").eq(1).css({"transform": "rotate(90deg)"});
-        section.css({"height": "422"});
+        section.css({"height": "422px"});
+        section.find(".feature-gallery").css({"opacity": "100%"});
+        // section.addClass("expand-section").removeClass("minimize-section");
         maximizeFeature($(section).parents(".portfolio-feature"));
     }
     else
@@ -608,6 +610,8 @@ function toggleMore(section, select)
         $(section).prop("open", false);
         icon.find("path").eq(1).css({"transform": "rotate(0deg)"});
         section.css({"height": "32px"});
+        section.find(".feature-gallery").css({"opacity": "0%"});
+        // section.addClass("minimize-section").removeClass("expand-section");
     }
 };
 
@@ -672,7 +676,7 @@ function maximizeFeature(feature)
     $(feature).css({"height": "600px"});
     $(feature).find(".feature-menu").css({"max-width": "600px"});
     setTimeout(function() { $(feature).find(".feature-description").css({"left": "0px", "opacity": "100%"}); }, 250);
-    highlightFeature(feature);
+    // highlightFeature(feature);
     $(feature).find(".expand-icon").css({"transform": "scaleY(-1)"}).removeClass("bouncing").prop("expanded", true);
     // toggleMore($(feature).find(".feature-menu > div").eq(0), true);
     // Waypoint.refreshAll();
@@ -728,7 +732,7 @@ $(".expand-icon").on("mousedown", function()
 $(".menu-item-bar").on("mousedown", function()
 {
     let section = $(this).parent();
-    let sections = section.siblings();
+    // let sections = section.siblings();
 
     if (section.prop("open"))
     {
@@ -736,7 +740,7 @@ $(".menu-item-bar").on("mousedown", function()
     }
     else
     {
-        sections.each(function() { toggleMore($(this), false);} );
+        section.siblings().each(function() { toggleMore($(this), false);} );
         toggleMore(section, true);
     }
 });
