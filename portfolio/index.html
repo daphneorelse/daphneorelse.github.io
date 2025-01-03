@@ -4,8 +4,6 @@
         <title>Daphne Wilkerson</title>
         <link rel="stylesheet" href="../assets/css/main.css">
         <link rel="shortcut icon" href="../assets/images/favicon.ico"/>
-        
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script> -->
     </head>
     <body>
         <svg class="corner" viewBox="0 0 84 84" fill="none" stroke="#FF5252" xmlns="http://www.w3.org/2000/svg">
@@ -31,17 +29,19 @@
             </div>
         </div>
         <div id="portfolio-home">
-            <!-- <svg id="mouse-crosshair" class="absolute width-100p height-100p" stroke="#ffffff">
-                <line x1="0" y1="0%" x2="0" y2="100%" stroke-width="4" />
-                <line x1="0%" y1="0" x2="100%" y2="0" stroke-width="4" />
-            </svg> -->
-            
-            <div class="portfolio-container">
-                
-                <p id="big-name" class="fit-width corner-target" style="font-size: 130px">
-                    Daphne Wilkerson
-                </p>
-                <div id="shooting-gallery" class="corner-target tool-border">
+            <div style="position: relative; margin: 100px; z-index: 2; font-size: 15px;">
+                <div id="big-name" class="flex-row align-start">
+                    <div class="flex-column small-gap align-start fit-width inline-block left-tool-border" style="margin-right: 10px; font-weight: 650">
+                        <p>Welcome</p>
+                        <p>to</p>
+                        <p>the</p>
+                        <p>design</p>
+                        <p>portfolio</p>
+                        <p>of</p>
+                    </div>
+                    <span style="font-size: 140px; margin-top: -29px">Daphne Wilkerson.</span>
+                </div>
+                <div id="shooting-gallery" class="corner-target tool-border" style="margin-top: 50px; margin-bottom: 75px">
                     <div id="gallery-sight">
                         <svg style="z-index: 5;" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M267 137.5C267 209.021 209.021 267 137.5 267C65.9791 267 8 209.021 8 137.5C8 65.9791 65.9791 8 137.5 8C209.021 8 267 65.9791 267 137.5Z" fill="#DCECDF"/>
@@ -59,21 +59,18 @@
                     </p>
                     
                 </div>
-                <p class="corner-target fit-width">
+                <p class="fit-width">
                     Design means a lot to me, and it's what I'll be doing my whole life.
                 </p>
-                <div class="link-button corner-target">a link</div>
-                <!-- <div class="link-button corner-target">another link</div> -->
             </div>
-            
+        </div>
+        <div class="width-100p green-gradient flex-row space-evenly align-center" style="height: 150px;">
+            <p class="large-text tool-border" style="font-weight: 800">Case Studies</p>
         </div>
         <div class="portfolio-feature">
             <div class="feature-basics">
                 <div class="feature-title-line">
-                    <!-- <div class="icon-background"> -->
-                        <img src="assets/images/melody meadows icon.webp" alt="Melody Meadows Icon">
-                    <!-- </div> -->
-                    
+                    <img src="assets/images/melody meadows icon.webp" alt="Melody Meadows Icon">
                     <p>Melody Meadows</p>
                 </div>
                 
@@ -101,134 +98,137 @@
                     </div>
                 </div>
             </div>
-            <div class="feature-menu">
-                <div>
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Preview</p>
-                    </div>
-                    <div class="feature-gallery">
-                        <img src="assets/melody meadows/practice technique.png" alt="Practicing Technique">
-                        <img src="assets/melody meadows/favorite pieces.png" alt="Favorite Pieces">
-                        <img src="assets/melody meadows/technique selection.png" alt="Technique Selection">
-                        <img src="assets/melody meadows/practice piece.png" alt="Practicing a Piece">
-                        <img src="assets/melody meadows/friends.png" alt="Friends">
-                        <img src="assets/melody meadows/visit friend.png" alt="Visiting a Friend">
-                        <img src="assets/melody meadows/select piece.png" alt="Selecting a Piece">
-                        <img src="assets/melody meadows/select part.png" alt="Selecting a Part">
-                    </div>
-                </div>
-                <div>
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Roadmap</p>
-                    </div>
-                    <div class="feature-gallery">
-                        <div>
-                            <h2>Overview</h2>
-                            <p>10 week design period</p>
-                            <p>Team of 4 designers</p>
-                            <p>Goal: to design a high fidelity prototype of a digitial solution to a modern global challenge</p>
+            <div class="menu-area">
+                <div class="feature-menu">
+                    <div>
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Preview</p>
                         </div>
-                        <div>
-                            <h2>1. Background Research</h2>
-                            <p>In choosing a problem space such as music education for attention-disordered students, our literature review indicated game-ification and social networking were promising angles with which to design a solution.</p>
-                        </div>
-                        <div>
-                            <h2>2. Needfinding</h2>
-                            <p>Talking to several ADHD musicians taught us more about existing tools and habits they use to deepen and lengthen their music learning.</p>
-                        </div>
-                        <div>
-                            <h2>3. Solution Ideation</h2>
-                            <p>By building several POVs of our needfinding subjects, we considered a wide solution space including matchmaking systems, productivity software, and RPG games.</p>
-                        </div>
-                        <div>
-                            <h2>4. Experience Prototypes</h2>
-                            <p>Based on our early-stage proposed solution, we formulated several experiments with ADHD musicians testing questions we have about our solution space:</p>
-                            <ul>
-                                <li>How long do they like spending to learn music?</li>
-                                <li>How easily can they achieve a "flow state"?</li>
-                                <li>Are they affected by "choice paralysis" when practicing music?</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2>5. Low-Fi Prototype</h2>
-                            <p>
-                                Upon testing our assumptions, we chose <b>Melody Meadows</b> for its promise in achieving user flow states and helping users become invested in their learning.
-                                Our first prototype focused on three tasks flows:
-                            </p>
-                            <ol>
-                                <li>Learning a technique</li>
-                                <li>Playing a song</li>
-                                <li>Playing music with a friend</li>
-                            </ol>
-                            <p>Observing new subjects using this prototype showed us they became invested in the characters, but wanted more customizability in their lessons.</p>
-                        </div>
-                        <div>
-                            <h2>6. Med-Fi Prototype</h2>
-                            <p>
-                                Increasing fidelity for us meant building our previous taskflows according to our formalized style sheet in Figma, and fleshing out the characters' world with basic top-down 2D graphics.
-                                We also built out our tasks more elaborately, including designing for feedback from game characters while users are playing a song.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>7. Usability Study</h2>
-                            <p>
-                                Testing our med-fi prototype with four target users showed us what was working &#40;namely, dialogue boxes with several branching options&#41;,
-                                and what users wished for &#40;e.g. more inuitive instrument and music UI, town navigation, and more substance in the <i>playing with a friend</i> taskflow&#41;.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>8. Heuristic Evaluation</h2>
-                            <p>
-                                An evaluation of our med-fi prototype by ourselves and four other design students yielded a total of 68 violations, spanning across 12 different design standard categories.
-                                Some such violations indicated we should take inspiration from mobile game design in indicating certain character interactions, and to take inspiration from more static apps that have more consistent navigation icons.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>9. Med-Fi Redesign</h2>
-                            <p>
-                                To address both the critiques voiced from usability study and the heuristic evaluation, we underwent a redesign focused on increasing the visibility of game state,
-                                standardizing navigation, improving readability, and building out a more extensive <i>playing with a friend</i> taskflow.
-                            </p>
-                            <p>
-                                We tested this redesign with three more target users who indicated the need for a more distinct technique-learning taskflow, separate from song-playing.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>10. Hi-Fi Prototype</h2>
-                            <p>
-                                Our final prototype for <b>Melody Meadows</b> polished user experience by focusing on visual consistency to make the in-game environments more cohesive.
-                                We designed a more distinct technique-learning taskflow and made navigation between tasks more simple with the use of a map.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>11. Website</h2>
-                            <p>
-                                To showcase our design process and continue fleshing out our branding and design cohesion, we created a website outfitted with promotional motion graphics.
-                            </p>
+                        <div class="feature-gallery">
+                            <img src="assets/melody meadows/practice technique.png" alt="Practicing Technique">
+                            <img src="assets/melody meadows/favorite pieces.png" alt="Favorite Pieces">
+                            <img src="assets/melody meadows/technique selection.png" alt="Technique Selection">
+                            <img src="assets/melody meadows/practice piece.png" alt="Practicing a Piece">
+                            <img src="assets/melody meadows/friends.png" alt="Friends">
+                            <img src="assets/melody meadows/visit friend.png" alt="Visiting a Friend">
+                            <img src="assets/melody meadows/select piece.png" alt="Selecting a Piece">
+                            <img src="assets/melody meadows/select part.png" alt="Selecting a Part">
                         </div>
                     </div>
-                </div>
-                <div style="border-bottom: none">
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Style Guide</p>
+                    <div>
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Roadmap</p>
+                        </div>
+                        <div class="feature-gallery">
+                            <div>
+                                <h2>Overview</h2>
+                                <p>10 week design period</p>
+                                <p>Team of 4 designers</p>
+                                <p>Goal: to design a high fidelity prototype of a digitial solution to a modern global challenge</p>
+                            </div>
+                            <div>
+                                <h2>1. Background Research</h2>
+                                <p>In choosing a problem space such as music education for attention-disordered students, our literature review indicated game-ification and social networking were promising angles with which to design a solution.</p>
+                            </div>
+                            <div>
+                                <h2>2. Needfinding</h2>
+                                <p>Talking to several ADHD musicians taught us more about existing tools and habits they use to deepen and lengthen their music learning.</p>
+                            </div>
+                            <div>
+                                <h2>3. Solution Ideation</h2>
+                                <p>By building several POVs of our needfinding subjects, we considered a wide solution space including matchmaking systems, productivity software, and RPG games.</p>
+                            </div>
+                            <div>
+                                <h2>4. Experience Prototypes</h2>
+                                <p>Based on our early-stage proposed solution, we formulated several experiments with ADHD musicians testing questions we have about our solution space:</p>
+                                <ul>
+                                    <li>How long do they like spending to learn music?</li>
+                                    <li>How easily can they achieve a "flow state"?</li>
+                                    <li>Are they affected by "choice paralysis" when practicing music?</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2>5. Low-Fi Prototype</h2>
+                                <p>
+                                    Upon testing our assumptions, we chose <b>Melody Meadows</b> for its promise in achieving user flow states and helping users become invested in their learning.
+                                    Our first prototype focused on three tasks flows:
+                                </p>
+                                <ol>
+                                    <li>Learning a technique</li>
+                                    <li>Playing a song</li>
+                                    <li>Playing music with a friend</li>
+                                </ol>
+                                <p>Observing new subjects using this prototype showed us they became invested in the characters, but wanted more customizability in their lessons.</p>
+                            </div>
+                            <div>
+                                <h2>6. Med-Fi Prototype</h2>
+                                <p>
+                                    Increasing fidelity for us meant building our previous taskflows according to our formalized style sheet in Figma, and fleshing out the characters' world with basic top-down 2D graphics.
+                                    We also built out our tasks more elaborately, including designing for feedback from game characters while users are playing a song.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>7. Usability Study</h2>
+                                <p>
+                                    Testing our med-fi prototype with four target users showed us what was working &#40;namely, dialogue boxes with several branching options&#41;,
+                                    and what users wished for &#40;e.g. more inuitive instrument and music UI, town navigation, and more substance in the <i>playing with a friend</i> taskflow&#41;.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>8. Heuristic Evaluation</h2>
+                                <p>
+                                    An evaluation of our med-fi prototype by ourselves and four other design students yielded a total of 68 violations, spanning across 12 different design standard categories.
+                                    Some such violations indicated we should take inspiration from mobile game design in indicating certain character interactions, and to take inspiration from more static apps that have more consistent navigation icons.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>9. Med-Fi Redesign</h2>
+                                <p>
+                                    To address both the critiques voiced from usability study and the heuristic evaluation, we underwent a redesign focused on increasing the visibility of game state,
+                                    standardizing navigation, improving readability, and building out a more extensive <i>playing with a friend</i> taskflow.
+                                </p>
+                                <p>
+                                    We tested this redesign with three more target users who indicated the need for a more distinct technique-learning taskflow, separate from song-playing.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>10. Hi-Fi Prototype</h2>
+                                <p>
+                                    Our final prototype for <b>Melody Meadows</b> polished user experience by focusing on visual consistency to make the in-game environments more cohesive.
+                                    We designed a more distinct technique-learning taskflow and made navigation between tasks more simple with the use of a map.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>11. Website</h2>
+                                <p>
+                                    To showcase our design process and continue fleshing out our branding and design cohesion, we created a website outfitted with promotional motion graphics.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-content">
-                        <img src="assets/melody meadows/melody meadows style guide.png" alt="Style Guide for Melody Meadows">
+                    <div style="border-bottom: none">
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Style Guide</p>
+                        </div>
+                        <div class="menu-content">
+                            <img src="assets/melody meadows/melody meadows style guide.png" alt="Style Guide for Melody Meadows">
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <svg class="expand-icon" viewBox="0 0 349 175" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.322266 0.947754H71.0329L174.27 104.185L277.508 0.947797H348.218L174.271 174.896L0.322266 0.947754Z"/>
             </svg>
@@ -237,7 +237,7 @@
         <div class="portfolio-feature">
             <div class="feature-basics">
                 <div class="feature-title-line">
-                    <svg viewBox="0 0 103 67" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 103 67" fill="#0E1014" xmlns="http://www.w3.org/2000/svg">
                         <path d="M25.8833 5.1748H17.8833L0.925781 60.6405H36.9258L39.2648 52.99H11.2648L25.8833 5.1748Z"/>
                         <path d="M51.3284 33.4706C54.7193 22.3794 66.8702 13.3882 78.4682 13.3882C84.4068 13.3882 89.0448 15.7406 91.7095 19.5342L93.6438 22.2881L101.027 16.9783L99.0922 14.2244C95.4205 8.99701 89.0066 5.73779 80.8072 5.73779C64.7909 5.73779 48.0111 18.1542 43.3284 33.4706C38.6457 48.7871 47.8334 61.2035 63.8496 61.2035C72.0491 61.2035 80.4558 57.9443 87.3239 52.7169L90.9421 49.963L86.8061 44.6532L83.1879 47.407C78.2036 51.2007 72.1272 53.553 66.1886 53.553C54.5906 53.553 47.9375 44.5618 51.3284 33.4706Z"/>
                         <path id="crosshair" style="transition: fill 250ms" fill-rule="evenodd" clip-rule="evenodd" d="M79.9251 18.4383L85.5623 0H79.5623L73.9251 18.4383C67.1376 19.6049 60.5872 24.4519 57.4872 30.6018H38.2064L36.4521 36.3396H55.7329C55.0726 42.4894 58.6592 47.3364 64.7334 48.503L59.0963 66.9413H65.0963L70.7334 48.503C77.5209 47.3364 84.0713 42.4894 87.1714 36.3396H100.952L102.706 30.6018H88.9256C89.5859 24.4519 85.9993 19.6049 79.9251 18.4383ZM72.1191 24.3454C68.7235 25.2795 65.5503 27.6276 63.6642 30.6018H70.2064L72.1191 24.3454ZM76.2064 30.6018L78.1191 24.3454C80.9436 25.2795 82.6811 27.6276 82.7486 30.6018H76.2064ZM68.4521 36.3396H61.91C61.9775 39.3138 63.7149 41.6618 66.5394 42.5959L68.4521 36.3396ZM72.5394 42.5959L74.4521 36.3396H80.9943C79.1082 39.3138 75.9351 41.6618 72.5394 42.5959Z"/>
@@ -270,94 +270,120 @@
                     </div>
                 </div>
             </div>
-            <div class="feature-menu">
-                <div>
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Preview</p>
-                    </div>
-                    <div class="feature-gallery">
-                        <img src="../assets/images/launchcodes full screenshot.png" style="border: none" alt="LaunchCodes interface">
-                        <video src="../assets/videos/oscillator recording.mp4" muted loop autoplay></video>
-                        <video src="../assets/videos/reverb recording.mp4" muted loop autoplay></video>
-                        <video src="../assets/videos/waveshaper recording.mp4" muted loop autoplay></video>
-                    </div>
-                </div>
-                <div>
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Roadmap</p>
-                    </div>
-                    <div class="feature-gallery">
-                        <div>
-                            <h2>Overview</h2>
-                            <p>Design period of 5 months</p>
-                            <p>Solo project</p>
-                            <p>Goal: to design and build an industry-standard audio production plugin, hostable in many digital audio workstations and intuitive to use for a wide user-base</p>
+            <div class="menu-area">
+                <div class="feature-menu">
+                    <div>
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Preview</p>
                         </div>
-                        <div>
-                            <h2>0. Needfinding</h2>
-                            <p>
-                                As an amateur music producer, finding a problem space in the audio plugin format was no issue.
-                                An idea I had for a new track necessitated a tool that would let me synthesize a series of explosion sounds, with an array of effects and fine controls that would let me build a dynamic composition.
-                                This problem implied a complex and challenging design and directly inspired my solution.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>1. Background Research</h2>
-                            <p>
-                                To point me in the right direction of a solution, I first researched existing solutions to the problem.
-                                No audio plugin existed outright as a perfect fit, though I learned about what plugins other producers would use as part of a chain to achieve their desired sound.
-                                Additionally, I reviewed a wide array of state-of-the-art plugins to understand what kinds of design inspire me and what falls short.
-                            </p>
-                        </div>
-                        <div style="min-width: 250px">
-                            <h2>2. Experience Prototype</h2>
-                            <p>
-                                My research prompted me to create my own explosion synthesis chain in my digital audio workstation, consisting of two synthesis sources, four audio effects, and two modulation sources.
-                                I experimented with what sounds it could create and began to understand which controls were necessary & intuitive, and obsolete & obscure.
-                            </p>
-                            <p>
-                                This prototype showed me I wanted much more control with the distortion unit, less control of the reverb unit, and a dual-envelope view of both synthesis sources so I could keep track of the plugin state at a glance.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>3. Style Standards</h2>
-                            <p>
-                                In creating tool for explosive sounds, I first gathered inspiration for UI elements from naval ship controls, depictions of nuclear bomb detonators, and traditional oscilloscopes.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>4. </h2>
-                        </div>
-                        <div>
-                            <h2>5.</h2>
-                        </div>
-                        <div>
-                            <h2>6. Branding</h2>
-                        </div>
-                        <div>
-                            <h2>7. Website</h2>
+                        <div class="feature-gallery">
+                            <img src="../assets/images/launchcodes full screenshot.png" style="border: none" alt="LaunchCodes interface">
+                            <video src="../assets/videos/oscillator recording.mp4" muted loop autoplay></video>
+                            <video src="../assets/videos/reverb recording.mp4" muted loop autoplay></video>
+                            <video src="../assets/videos/waveshaper recording.mp4" muted loop autoplay></video>
                         </div>
                     </div>
-                </div>
-                <div style="border-bottom: none">
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Style Guide</p>
+                    <div>
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Roadmap</p>
+                        </div>
+                        <div class="feature-gallery">
+                            <div>
+                                <h2>Overview</h2>
+                                <p>Design period of 5 months</p>
+                                <p>Solo project</p>
+                                <p>Goal: to design and build an industry-standard audio production plugin, hostable in many digital audio workstations and intuitive to use for a wide user-base</p>
+                            </div>
+                            <div>
+                                <h2>0. Needfinding</h2>
+                                <p>
+                                    As an amateur music producer, finding a problem space in the audio plugin format was no issue.
+                                    An idea I had for a new track necessitated a tool that would let me synthesize a series of explosion sounds, with an array of effects and fine controls that would let me build a dynamic composition.
+                                    This problem implied a complex and challenging design and directly inspired my solution.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>1. Background Research</h2>
+                                <p>
+                                    To point me in the right direction of a solution, I first researched existing solutions to the problem.
+                                    No audio plugin existed outright as a perfect fit, though I learned about what plugins other producers would use as part of a chain to achieve their desired sound.
+                                    Additionally, I reviewed a wide array of state-of-the-art plugins to understand what kinds of design inspire me and what falls short.
+                                </p>
+                            </div>
+                            <div style="min-width: 250px">
+                                <h2>2. Experience Prototype</h2>
+                                <p>
+                                    My research prompted me to create an explosion synthesis chain with existing tools in my digital audio workstation—this chain consisted of two synthesis sources, four audio effects, and two modulation sources.
+                                    I experimented with what sounds it could create and began to understand which controls were necessary & intuitive, and obsolete & obscure.
+                                </p>
+                                <p>
+                                    This prototype showed me I wanted much more control with the distortion unit, less control of the reverb unit, and a dual-envelope view of both synthesis sources so I could keep track of the plugin state at a glance.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>3. Style Standards</h2>
+                                <p>
+                                    In creating a tool for explosive sounds, I first gathered inspiration for UI elements from naval ship controls, depictions of nuclear bomb detonators, and traditional oscilloscopes.
+                                    This directed my choice of color palette, which draws from these tools, measurement instruments, warning lights, vintage monitors, and hardware buttons.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>4. UI Design</h2>
+                                <p>
+                                    Over multiple iterations and several months, I designed vector assets and coded the complete interface with Juce/C++. 
+                                    UI components needed to balance readability, smooth control, flexibility, host parameter linking, and thematic consistency, and the overall layout needed to consider compactness, visual hierarchy, modularity (for reordering effects), and workflow.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>5. Audio Processing Architecture</h2>
+                                <p>
+                                    Alongside UI design and following the final interface design, I researched existing documentation of anti-aliased oscillator synthesis, noise synthesis, realtime automatible filter design, and appropriate distortion algorithms for my target sound.
+                                    Eventually, I built six seperate processing classes that managed over 80 host parameters and performed thread-safe audio processing with state-of-the-art atomics management.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>6. Testing</h2>
+                                <p>
+                                    With the program running smoothly with a complete interface, I needed to rigorously test it in several host DAWs to ensure compatibility with a variety of parameter architectures, plugin file formats, and GUI hosting environments.
+                                    I also put the program through a series of stress tests to ensure it could handle a high amount of simulatenous parameter updates and various sample rates.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>7. Branding</h2>
+                                <p>
+                                    Branding <b>LaunchCodes</b> came naturally from the designed controls and assets, which indicate a font and thematic style to adhere to, namely tactical, weapon-focused imagery with sharp angles.
+                                    Creating a company image also followed suit, where <b>Armory</b> evoked the weapon-like products and daring nature of the product design.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>8. Website Design</h2>
+                                <p>
+                                    To allow users to explore its features and listen to sound demos, I created a website from scratch complete with animations, interactive assets, videos, and adhering to the style standards of the product itself.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-content">
-                        <img src="assets/images/launchcodes style guide.png" alt="Style guide for LaunchCodes">
+                    <div style="border-bottom: none">
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Style Guide</p>
+                        </div>
+                        <div class="menu-content">
+                            <img src="assets/images/launchcodes style guide.png" alt="Style guide for LaunchCodes">
+                        </div>
                     </div>
+                
                 </div>
             </div>
             <svg class="expand-icon" viewBox="0 0 349 175" xmlns="http://www.w3.org/2000/svg">
@@ -371,7 +397,7 @@
                     <p>CoCo</p>
                 </div>
                 <div>
-                    <p>Your ethical shopping companion</p>
+                    <p class="medium-text">Your ethical shopping companion</p>
                 </div>
                 <div class="feature-tags">
                     <p>UI/UX</p>
@@ -391,43 +417,45 @@
                     </div>
                 </div>
             </div>
-            <div class="feature-menu">
-                <div>
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Preview</p>
+            <div class="menu-area">
+                <div class="feature-menu">
+                    <div>
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Preview</p>
+                        </div>
+                        <div class="feature-gallery">
+                            
+                        </div>
                     </div>
-                    <div class="feature-gallery">
-                        
+                    <div>
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Roadmap</p>
+                        </div>
+                        <div class="height-100p medium-padding light-green-background">
+                            <p>
+                                text on background
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Roadmap</p>
-                    </div>
-                    <div class="height-100p medium-padding light-green-background">
-                        <p>
-                            text on background
-                        </p>
-                    </div>
-                </div>
-                <div style="border-bottom: none">
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Style Guide</p>
-                    </div>
-                    <div class="height-100p medium-padding light-green-background">
-                        
+                    <div style="border-bottom: none">
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Style Guide</p>
+                        </div>
+                        <div class="height-100p medium-padding light-green-background">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -442,7 +470,7 @@
                     <p>HotPotato</p>
                 </div>
                 <div>
-                    <p>AI workout designer taking you from CouchPotato to HotPotato</p>
+                    <p class="medium-text">AI workout designer taking you from CouchPotato to HotPotato</p>
                 </div>
                 <div class="feature-tags">
                     <p>UI/UX</p>
@@ -459,43 +487,45 @@
                     </div>
                 </div>
             </div>
-            <div class="feature-menu">
-                <div>
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Preview</p>
+            <div class="menu-area">
+                <div class="feature-menu">
+                    <div>
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Preview</p>
+                        </div>
+                        <div class="feature-gallery">
+                            
+                        </div>
                     </div>
-                    <div class="feature-gallery">
-                        
+                    <div>
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Roadmap</p>
+                        </div>
+                        <div class="height-100p medium-padding light-green-background">
+                            <p>
+                                text on background
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Roadmap</p>
-                    </div>
-                    <div class="height-100p medium-padding light-green-background">
-                        <p>
-                            text on background
-                        </p>
-                    </div>
-                </div>
-                <div style="border-bottom: none">
-                    <div class="menu-item-bar">
-                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                        </svg>
-                        <p>Style Guide</p>
-                    </div>
-                    <div class="height-100p medium-padding light-green-background">
-                        
+                    <div style="border-bottom: none">
+                        <div class="menu-item-bar">
+                            <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                                <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                            </svg>
+                            <p>Style Guide</p>
+                        </div>
+                        <div class="height-100p medium-padding light-green-background">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -503,22 +533,100 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.322266 0.947754H71.0329L174.27 104.185L277.508 0.947797H348.218L174.271 174.896L0.322266 0.947754Z"/>
             </svg>
         </div>
+        <div style="height: 3px; width: 100%; background-image: linear-gradient(to right, var(--dark-contrast) 40%, var(--light-green) 0%); background-position: top; background-size: 25px 3px; background-repeat: repeat-x;"></div>
+        <div class="width-100p gray-gradient flex-row space-evenly align-center" style="height: 150px;">
+            <p class="large-text tool-border" style="font-weight: 800">Etc.</p>
+        </div>
+        <div id="etc-shelf">
+            <div class="etc-expandable">
+                <div class="etc-title-line">
+                    <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                        <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                    </svg>
+                    <h3>Laser-cut gloves</h3>
+                </div>
+                
+                <div class="etc-basics">
+                    <img src="assets/images/pinned glove back.png" alt="Laser-cut Lace Opera Glove">
+                    <p>Lace opera gloves, laser-cut on black nylon with an algorithmically generated Voronoi diagram pattern and hand-stitched.</p>
+                </div>
+                <img src="assets/images/printing.png" alt="Printing pattern">
+                <img src="assets/images/on hand.png" alt="Pattern on my hand">
+                <img src="assets/images/pinned glove front.png" alt="Glove pinned on my hand">
+                <img src="assets/images/stitched glove front.png" alt="Glove on my hand">
+            </div>
+            <div class="etc-expandable">
+                <div class="etc-title-line">
+                    <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                        <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                    </svg>
+                    <h3>Digital Fabric</h3>
+                </div>
+                
+                <div class="etc-basics">
+                    <img src="assets/images/digital fabric 1.png" alt="Digital fabric">
+                    <p>Procedurally generated pleated fabric texture tool, built in Processing.</p>
+                </div>
+                <img src="assets/images/digital fabric 1.png" alt="Digital fabric">
+                <img src="assets/images/digital fabric 2.png" alt="Digital fabric">
+                <img src="assets/images/digital fabric 3.png" alt="Digital fabric">
+            </div>
+            <div>
+                <div class="etc-title-line">
+                    <a href="https://ccrma.stanford.edu/~bskiff/220b/final/" target="_blank"><h3 style="text-decoration: underline"><i>I'm Not The Same</i></h3></a>
+                </div>
+                
+                <div class="etc-basics">
+                    <img src="assets/images/im not the same.png" alt="Still from I'm Not The Same">
+                    <p>A performed musical piece for self-designed synthesizer and sampler algorithm, built in ChucK and Processing.</p>
+                </div>
+            </div>
+            <div>
+                <div class="etc-title-line">
+                    <a href="https://220afinal-dec3.glitch.me/" target="_blank"><h3 style="text-decoration: underline">Grain Grid</h3></a>
+                </div>
+                
+                <div class="etc-basics">
+                    <img src="assets/images/grain grid.png" alt="Grain Grid">
+                    <p>A simple mini-website tool for responsive live granular synthesis, built with Web Audio.</p>
+                </div>
+            </div>
+            <div style="cursor: default">
+                <div class="etc-title-line">
+                    <h3>Flask</h3>
+                </div>
+                
+                <div class="etc-basics">
+                    <img src="assets/images/daft punk flask.png" alt="Daft Punk Flask">
+                    <p>Daft Punk vinyl design on flask, birthday gift, made with Cricut.</p>
+                </div>
+            </div>
+        </div>
         <div id="portfolio-about">
+            
+                
             <div class="portfolio-container align-center">
-                <div class="flex-row medium-gap relative medium-padding light-green-background">
+                <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 21H21M21 21H42M21 21V42.5M21 21V0" stroke="#8EC29A" stroke-width="4"/>
+                    <path d="M31 21C31 26.5228 26.5228 31 21 31C15.4772 31 11 26.5228 11 21C11 15.4772 15.4772 11 21 11C26.5228 11 31 15.4772 31 21Z" stroke="#8EC29A" stroke-width="4"/>
+                </svg>
+                <div class="flex-row medium-gap relative medium-padding light-green-background" style="margin-bottom: 30px">
                     <div class="absolute blur-6p" style="width: 110%; height: 120%; left: -30px; top: -30px"></div>
                     <div id="shifting-container" class="tool-border"></div>
-                    <img class="corner-target" id="portfolio-profile-pic" style="width: 150px; height: 150px; position: absolute; top: 40px; left: 40px" src="../assets/images/red head.JPG" alt="My Face">
-                    <p class="large-text relative z-10">
+                    <img class="corner-target" id="portfolio-profile-pic" style="width: 150px; height: 150px; position: absolute; top: 40px; left: 40px; z-index: 1" src="../assets/images/red head.JPG" alt="My Face">
+                    <p class="large-text relative z-10" style="font-weight: 650">
                         I don't bite &#58;&#41
                     </p>
                 </div>
-                <div class="medium-content-width flex-column medium-gap align-start">
+                <div id="about-box" class="medium-content-width flex-column medium-gap align-start light-green-background relative" style="padding: 30px; font-weight: 450">
+                    <div class="absolute blur-6p" style="width: 110%; height: calc(100% + 50px); left: -30px; top: -30px; z-index: 0;"></div>
                     <p>
-                        I'm a UI/UX designer from San Diego, California, and I'll first tell you about the things that inspire me.
+                        I'm a UI/UX designer from San Diego, California, and if you have the time, I'll talk your ear off about the things that inspire me right now:
                     </p>
-                    <div id="inspirations" class="flex-column align-start medium-gap">
-                        <div>
+                    <div id="inspirations" class="flex-column align-start medium-gap width-100p">
+                        <div class="flex-row width-100p medium-gap justify-center">
                             <div class="inspiration-name corner-target">
                                 Music
                             </div>
@@ -534,7 +642,9 @@
                         </div>
                         <div class="inspiration-box">
                             <p>
-                                All of my artistic sensibilities come from music. My love of mixing, sound design, and world-building is what drives all my work, no matter the medium.
+                                All of my artistic sensibilities come from music. 
+                                As a childhood piano player-turned-composer and producer, the craft of a song will be a lifelong obsession of mine.
+                                And it goes beyond my own music—my love of mixing, sound design, and world-building is what drives all my work, no matter the medium.
                             </p>
                             <div class="inspiration-feature">
                                 <img src="assets/images/vulnicura.png" alt="Vulnicura cover by Björk">
@@ -561,24 +671,33 @@
                         </div>
                         <div class="inspiration-box">
                             <p>
-                                
+                                As a Tumblr user since tween-hood, the time I've spent over the course of my life looking at art and photography would likely shock me and you alike.
+                                Over the years I've discovered my prediliction for surrealism, vivid color, and humor, as well as creating it myself :&#41;
                             </p>
                             <div class="inspiration-feature">
-                                <img src="assets/images/vulnicura.png" alt="Vulnicura cover by Björk">
+                                <img src="assets/images/your package was delivered.jpg" alt="Your Package Was Delivered by Parker S. Jackson">
                                 <div class="inspiration-description">
-                                    <div class="link-button">Björk — Vulnicura</div>
+                                    <a href="https://www.instagram.com/parker.s.jackson/" target="_blank"><div class="link-button">Parker S. Jackson</div></a>
                                     <p>
-                                        
+                                        I proudly say I've been a long-time fan of Parker S. Jackson because I just think what he does is so singular.
+                                        His work has progressed over the years from more exploratory studies of the mundanely grotesque, to skillful surrealist paintings of vivid, nightmarish creatures, to now where he adopts properly classical techniques of painting to execute often funny, illogical, and always arresting tableaus of debauchery.
+                                        Truly a modern-day Hieronymus Bosch, Jackson's work always inspires within me a childlike terror and wonder.
                                     </p>
                                 </div>
                                 
                             </div>
                             <div class="inspiration-feature">
-                                <img src="assets/images/drukqs.png" alt="Drukqs cover by Aphex Twin">
+                                <div>
+                                    <img src="assets/images/topsy-turvy.webp" alt="Topsy-Turvy by Jang Koal">
+                                </div>
+
                                 <div class="inspiration-description">
-                                    <div class="link-button">Aphex Twin — Drukqs</div>
+                                    <a href="https://www.instagram.com/jangkoal/" target="_blank"><div class="link-button">Jang Koal</div></a>
                                     <p>
-                                        
+                                        Koal is a pop-surrealist artist born in South Korea that began her career as an illustrator.
+                                        I think this background highly informs her current work, which often feels inspired by animation and cartoon in its reverance of subject character.
+                                        The women she often depicts are stoic, pleasing, and somehow can portray both a sense of peace and mischief in me at once.
+                                        I found her work online a few months ago and have since been completely captivated.
                                     </p>
                                 </div>
                             </div>
@@ -615,18 +734,94 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="inspiration-box">
+                            <p>
+                                As my newest and deepest interest of the moment, martial arts have overwhelmed me of late with how much beauty and power they've added to my life.
+                                I respect all martial artists for their commitment in the face of personal risk, but I've come to love some disciplines most of all.
+                            </p>
+                            <div class="inspiration-feature">
+                                <img src="assets/images/nanquan.jpg" alt="Nanquan competitor Ryota Mori">
+                                <div class="inspiration-description">
+                                    <a href="https://www.youtube.com/watch?v=WEx7XHg8NJ8&ab_channel=bluehippofilms" target="_blank"><div class="link-button">Nanquan</div></a>
+                                    <p>
+                                        As distinguished from its longer-ranged northern counterpart Changquan, <i>Nanquan</i> is the modern southern Chinese martial arts discipline of barehanded fighting that saw widespread popularization in the 1960s.
+                                        I became enamored with this style because of its signiture low stances and forceful vocalizations known as <i>fasheng</i>, a combination of which is staggering to witness even on a screen—this has remained my favorite of the <i>wushu</i> competitive events.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inspiration-feature">
+                                <img src="assets/images/knife in target.jpg" alt="Throwing Knife">
+                                <div class="inspiration-description">
+                                    <a href="https://space.bilibili.com/3494356554090514" target="_blank"><div class="link-button">Knife Throwing</div></a>
+                                    <p>
+                                        Power, precision, and deadliness all converge in knife throwing, which I just can't get enough of.
+                                        Between western and eastern styles, I find myself more attracted to the artful and complicated movements eastern throwers pull off while nailing their knives into bullseyes.
+                                        I've linked my favorite thrower above, a prodigous girl named Zhang Keyi who demonstrates so much commitment to her craft and inspires me to keep my own skills just as sharp.
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
                     <p>
-                        Studying Human-Computer Interaction at Stanford was cool. I learned a ton. Most importantly, I figured out that most of the learning I have to do is still ahead of me.
+                        Studying Human-Computer Interaction at Stanford was insane. I learned a ton. 
+                        Most importantly, I figured out that most of the learning I have to do is still ahead of me.
                     </p>
                     <p>
-                        It's cheesy, but my work is also my play. Getting to the bottom of a needfinding interview, dreaming big in solution ideation, piecing together a wireframe, smoothing over a usability critique... 
+                        Since graduating, I've relished my freedom to let design lead the way. 
+                        I've taken my skills beyond design to actually <i>building</i> massive, complicated projects that are finding themselves in people's hands.
+                    </p>
+                    <p>
+                        I know it's cheesy, but my work is also my play. Getting to the bottom of a needfinding interview, dreaming big in solution ideation, piecing together a wireframe, smoothing over a usability critique... 
                         I treat it like a good mystery where I play detective, where a little madness goes a long way, and the best design for the problem is rarely the most obvious suspect.
                     </p>
                 </div>
-                
+                <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 21H21M21 21H42M21 21V42.5M21 21V0" stroke="#8EC29A" stroke-width="4"/>
+                    <path d="M31 21C31 26.5228 26.5228 31 21 31C15.4772 31 11 26.5228 11 21C11 15.4772 15.4772 11 21 11C26.5228 11 31 15.4772 31 21Z" stroke="#8EC29A" stroke-width="4"/>
+                </svg>
+                    
+                <div style="margin-top: 75px">
+                    <h1>Get in touch</h1>
+                </div>
+                <div class="flex-row small-content-width space-between align-center">
+                    <div class="contact-container">
+                        <div class="contact-overlay">
+                            <img src="../assets/images/linkedin.svg" alt="LinkedIn"></img>
+                        </div>
+                        <div class="contact-button-container">
+                            <a href="https://www.linkedin.com/in/daphne-wilkerson-a21517308/" target="_blank"><div class="link-button">LinkedIn</div></a>
+                        </div>
+                    </div>
+                    <div class="contact-container">
+                        <div class="contact-overlay">
+                            <img src="../assets/images/github.svg" alt="GitHub"></img>
+                        </div>
+                        <div class="contact-button-container">
+                            <a href="https://github.com/daphneorelse" target="_blank"><div class="link-button">GitHub</div></a>
+                        </div>
+                    </div>
+                    <div class="contact-container">
+                        <div class="contact-overlay">
+                            <img src="../assets/images/email.svg" alt="Email"></img>
+                        </div>
+                        <div class="contact-button-container">
+                            <div id="email-link" class="link-button">Copy Email to Clipboard</div>
+                        </div>
+                    </div>
+                    <div class="contact-container">
+                        <div class="contact-overlay">
+                            <img src="../assets/images/cv.svg" alt="CV"></img>
+                        </div>
+                        <div class="contact-button-container">
+                            <a href="../assets/documents/Daphne Wilkerson Resume.pdf" target="_blank"><div class="link-button">Résumé</div></a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
+            
         <div id="footer">
             <div class="medium-margin">
                 <svg height="30" viewBox="0 0 714 156" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
@@ -651,6 +846,6 @@
         </div>
        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="../assets/js/app.js"></script>
+        <script src="assets/js/portfolio.js"></script>
     </body>
 </html>
