@@ -282,6 +282,7 @@ $(".expand-icon").on("mousedown", function()
     }
     else
     {
+        toggleMore(feature.find(".feature-menu").children().eq(0), true);
         maximizeFeature(feature);
     }
 });
@@ -413,3 +414,22 @@ $("#email-link").on("mouseup", function()
         $(this).html("<p>Copy email to clipboard</p>");
     }, 2000);
 });
+
+// $(window).on("scroll", function() {
+//     var hT = $('#scroll-to').offset().top,
+//         hH = $('#scroll-to').outerHeight(),
+//         wH = $(window).height(),
+//         wS = $(this).scrollTop();
+//     if (wS > (hT+hH-wH)){
+//         console.log('H1 on the view!');
+//     }
+//  });
+
+$("#portfolio-logo").on("mouseenter", function()
+{
+    $(this).find("#sight svg").eq(1).css({"backdrop-filter": "blur(0px)"});
+
+}).on("mouseleave", function()
+{
+    $(this).find("#sight svg").eq(1).css({"backdrop-filter": "blur(2px)"});
+})
