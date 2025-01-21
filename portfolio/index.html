@@ -107,15 +107,25 @@
                             </svg>
                             <p>Preview</p>
                         </div>
-                        <div class="feature-gallery white-background">
-                            <img src="criticle/assets/prototype preview.png" alt="Preview of the Criticle Prototype">
-                            <img src="criticle/assets/Branding Kit.webp" alt="Criticle Branding Kit">
-                            <img src="criticle/assets/crit preferences.png" alt="Criticle critique preferences">
-                            <img src="criticle/assets/crit rating.png" alt="Criticle rating">
-                            <img src="criticle/assets/find crits.png" alt="Criticle find projects">
-                            <img src="criticle/assets/project header.png" alt="Criticle project header">
-                            <img src="criticle/assets/prompt responding.png" alt="Criticle prompt responses">
+                        
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-previous" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-next" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="feature-gallery white-background">
+                                <img src="criticle/assets/prototype preview.png" alt="Preview of the Criticle Prototype">
+                                <img src="criticle/assets/Branding Kit.webp" alt="Criticle Branding Kit">
+                                <img src="criticle/assets/crit preferences.png" alt="Criticle critique preferences">
+                                <img src="criticle/assets/crit rating.png" alt="Criticle rating">
+                                <img src="criticle/assets/find crits.png" alt="Criticle find projects">
+                                <img src="criticle/assets/project header.png" alt="Criticle project header">
+                                <img src="criticle/assets/prompt responding.png" alt="Criticle prompt responses">
+                            </div>
                         </div>
+                        
                     </div>
                     <div>
                         <div class="menu-item-bar">
@@ -125,75 +135,76 @@
                             </svg>
                             <p>Roadmap</p>
                         </div>
-                        <div class="feature-gallery">
-                            <div>
-                                <h2>Overview</h2>
-                                <p>2 week design sprint</p>
-                                <p>Solo design project</p>
-                                <p>On a lazy Saturday in January, the idea for a peer critique platform popped into my head—and off I went.</p>
-                                <a href="criticle/"><div class="link-button corner-target">View the Full Design Process</div></a>
-                            </div>
-                            <!-- <div>
-                                <h2>1. Background Research</h2>
-                                <p>
-                                    My first step of the whole process was a competitive analysis. 
-                                    What I learned very quickly was that artists without an in-person community tended to rely on things liks Facebook groups and Subreddits to get trustworthy and honest critique, taking on much of the burden themselves of finding like-minded artists.
-                                </p>
-                            </div> -->
-                            <div>
-                                <h2>1. User Research</h2>
-                                <p>
-                                    Talking to several artists in disciplines such as creative writing, music, and visual art showed me the paramount importance of flexibility in how projects are hosted by the design and how users direct one another on what kind of critique they're looking for.
-                                    After discussing things like the difference between in-person vs. digital critique, synchronous vs. asynchronous critique, prompt-sharing, trust-building, and the emotional rise & fall of critique, I was more convinced than ever a digital solution was promising.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>2. POVs & Ideation</h2>
-                                <p>
-                                    By building several POVs of my research participants and understanding where a product could meet their needs, I began making decisions about how my design would take form. 
-                                    I eventually landed on a desktop website solution for asynchronuous critique trading, bolstered by a mutual rating system and tuned recommendations to help users find other artists like themselves.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>3. Architecture</h2>
-                                <p>
-                                    Once the solution started to take form, I formalizd all my ideas by building a top-down sitemap and full user flow diagram showing the decision paths of seven unique user personas.
-                                    This step is what fully solidified the project in my mind and got me excited to prototype.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>5. Low-Fi Prototype</h2>
-                                <p>
-                                    Using Figma, I began piecing together a rough wireframe of all my screens and flows. My biggest challenges here were formalizing the project creation input methods (deciding on tag searching was important) and making each page's hierachical structure as visible as possible.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>6. Low-Fi Testing</h2>
-                                <p>
-                                    User testing told me without a shadow of a doubt what <i>wasn't</i> working (putting the Learn tab in the user profile section was a clear mistake) and that the visual & conceptual differences between <i>received</i> and <i>completed</i> critiques were not distinguished enough.
-                                    However, participants also made it clear I was on the right track in terms of my design for trustworthiness and artistic community.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>7. UI Kit & Branding</h2>
-                                <p>
-                                    The importance of building trust and giving honest critique led me to prioritize commanding authority with my design, but I also knew the design should not be distracting enough to take away from the artists' projects.
-                                    These choices laid the foundation of my UI Kit and branding, which took inspiration from vintage manuscripts, wrought iron, and higher education and manifested as ornamental flourishes, inky blue & parchment tan, and literary serif typefaces.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>8. Hi-Fi Prototype</h2>
-                                <p>
-                                    In translating my low-fi prototype into more a vivid state, I found subtle ways of incorporating my newer, more stylish design elements while decluttering inessential noise. 
-                                    I incorporated feedback from Low-Fi testing, such as making a dedicated Learn tab, a section for received Crit ratings, and better hierarchical design of the user project page.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>9. Usability Testing & Priority Revision</h2>
-                                <p>
-                                    Testing confirmed my feeling that the Hi-Fi prototype was a huge improvement in usability over the Low-Fi, and artists really resonated with the amount of flexibility they're given in project creation and filling out critique forms.
-                                    Some feedback prompted me to implement small but impactful changes that help users deliver their best critique possible, as well as increasing visibility of some lower-priority information to the home screen.
-                                </p>
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-previous" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-next" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="feature-gallery">
+                                <div class="roadmap-box">
+                                    <h2>Overview</h2>
+                                    <p>2 week design sprint</p>
+                                    <p>Solo design project</p>
+                                    <p>On a lazy Saturday in January, the idea for a peer critique platform popped into my head—and off I went.</p>
+                                    <a href="criticle/"><div class="link-button corner-target">View the Full Design Process</div></a>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>1. User Research</h2>
+                                    <p>
+                                        Talking to several artists in disciplines such as creative writing, music, and visual art showed me the paramount importance of flexibility in how projects are hosted by the design and how users direct one another on what kind of critique they're looking for.
+                                        After discussing things like the difference between in-person vs. digital critique, synchronous vs. asynchronous critique, prompt-sharing, trust-building, and the emotional rise & fall of critique, I was more convinced than ever a digital solution was promising.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>2. POVs & Ideation</h2>
+                                    <p>
+                                        By building several POVs of my research participants and understanding where a product could meet their needs, I began making decisions about how my design would take form. 
+                                        I eventually landed on a desktop website solution for asynchronuous critique trading, bolstered by a mutual rating system and tuned recommendations to help users find other artists like themselves.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>3. Architecture</h2>
+                                    <p>
+                                        Once the solution started to take form, I formalizd all my ideas by building a top-down sitemap and full user flow diagram showing the decision paths of seven unique user personas.
+                                        This step is what fully solidified the project in my mind and got me excited to prototype.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>4. Low-Fi Prototype</h2>
+                                    <p>
+                                        Using Figma, I began piecing together a rough wireframe of all my screens and flows. My biggest challenges here were formalizing the project creation input methods (deciding on tag searching was important) and making each page's hierachical structure as visible as possible.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>5. Low-Fi Testing</h2>
+                                    <p>
+                                        User testing told me without a shadow of a doubt what <i>wasn't</i> working (putting the Learn tab in the user profile section was a clear mistake) and that the visual & conceptual differences between <i>received</i> and <i>completed</i> critiques were not distinguished enough.
+                                        However, participants also made it clear I was on the right track in terms of my design for trustworthiness and artistic community.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>6. UI Kit & Branding</h2>
+                                    <p>
+                                        The importance of building trust and giving honest critique led me to prioritize commanding authority with my design, but I also knew the design should not be distracting enough to take away from the artists' projects.
+                                        These choices laid the foundation of my UI Kit and branding, which took inspiration from vintage manuscripts, wrought iron, and higher education and manifested as ornamental flourishes, inky blue & parchment tan, and literary serif typefaces.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>7. Hi-Fi Prototype</h2>
+                                    <p>
+                                        In translating my low-fi prototype into more a vivid state, I found subtle ways of incorporating my newer, more stylish design elements while decluttering inessential noise. 
+                                        I incorporated feedback from Low-Fi testing, such as making a dedicated Learn tab, a section for received Crit ratings, and better hierarchical design of the user project page.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>8. Usability Testing & Priority Revision</h2>
+                                    <p>
+                                        Testing confirmed my feeling that the Hi-Fi prototype was a huge improvement in usability over the Low-Fi, and artists really resonated with the amount of flexibility they're given in project creation and filling out critique forms.
+                                        Some feedback prompted me to implement small but impactful changes that help users deliver their best critique possible, as well as increasing visibility of some lower-priority information to the home screen.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -205,8 +216,16 @@
                             </svg>
                             <p>Style Guide</p>
                         </div>
-                        <div class="menu-content">
-                            <img src="assets/images/criticle ui kit.png" alt="Style Guide for Criticle">
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-left" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-right" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="menu-content">
+                                <img src="assets/images/criticle ui kit.png" alt="Style Guide for Criticle">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,11 +282,19 @@
                             </svg>
                             <p>Preview</p>
                         </div>
-                        <div class="feature-gallery">
-                            <img src="../assets/images/launchcodes full screenshot.png" style="border: none" alt="LaunchCodes interface">
-                            <video src="../assets/videos/oscillator recording.mp4" muted loop autoplay></video>
-                            <video src="../assets/videos/reverb recording.mp4" muted loop autoplay></video>
-                            <video src="../assets/videos/waveshaper recording.mp4" muted loop autoplay></video>
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-previous" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-next" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="feature-gallery">
+                                <img src="../assets/images/launchcodes full screenshot.png" style="border: none" alt="LaunchCodes interface">
+                                <video src="../assets/videos/oscillator recording.mp4" muted loop autoplay></video>
+                                <video src="../assets/videos/reverb recording.mp4" muted loop autoplay></video>
+                                <video src="../assets/videos/waveshaper recording.mp4" muted loop autoplay></video>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -278,79 +305,87 @@
                             </svg>
                             <p>Roadmap</p>
                         </div>
-                        <div class="feature-gallery">
-                            <div>
-                                <h2>Overview</h2>
-                                <p>Design period of 5 months</p>
-                                <p>Solo project</p>
-                                <p>Goal: to design and build an industry-standard audio production plugin, hostable in many digital audio workstations and intuitive to use for a wide user-base</p>
-                            </div>
-                            <div>
-                                <h2>0. Needfinding</h2>
-                                <p>
-                                    As an amateur music producer, finding a problem space in the audio plugin format was no issue.
-                                    An idea I had for a new track necessitated a tool that would let me synthesize a series of explosion sounds, with an array of effects and fine controls that would let me build a dynamic composition.
-                                    This problem implied a complex and challenging design and directly inspired my solution.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>1. Background Research</h2>
-                                <p>
-                                    To point me in the right direction of a solution, I first researched existing solutions to the problem.
-                                    No audio plugin existed outright as a perfect fit, though I learned about what plugins other producers would use as part of a chain to achieve their desired sound.
-                                    Additionally, I reviewed a wide array of state-of-the-art plugins to understand what kinds of design inspire me and what falls short.
-                                </p>
-                            </div>
-                            <div style="min-width: 250px">
-                                <h2>2. Experience Prototype</h2>
-                                <p>
-                                    My research prompted me to create an explosion synthesis chain with existing tools in my digital audio workstation—this chain consisted of two synthesis sources, four audio effects, and two modulation sources.
-                                    I experimented with what sounds it could create and began to understand which controls were necessary & intuitive, and obsolete & obscure.
-                                </p>
-                                <p>
-                                    This prototype showed me I wanted much more control with the distortion unit, less control of the reverb unit, and a dual-envelope view of both synthesis sources so I could keep track of the plugin state at a glance.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>3. Style Standards</h2>
-                                <p>
-                                    In creating a tool for explosive sounds, I first gathered inspiration for UI elements from naval ship controls, depictions of nuclear bomb detonators, and traditional oscilloscopes.
-                                    This directed my choice of color palette, which draws from these tools, measurement instruments, warning lights, vintage monitors, and hardware buttons.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>4. UI Design</h2>
-                                <p>
-                                    Over multiple iterations and several months, I designed vector assets and coded the complete interface with Juce/C++. 
-                                    UI components needed to balance readability, smooth control, flexibility, host parameter linking, and thematic consistency, and the overall layout needed to consider compactness, visual hierarchy, modularity (for reordering effects), and workflow.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>5. Audio Processing Architecture</h2>
-                                <p>
-                                    Alongside UI design and following the final interface design, I researched existing documentation of anti-aliased oscillator synthesis, noise synthesis, realtime automatible filter design, and appropriate distortion algorithms for my target sound.
-                                    Eventually, I built six seperate processing classes that managed over 80 host parameters and performed thread-safe audio processing with state-of-the-art atomics management.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>6. Testing</h2>
-                                <p>
-                                    With the program running smoothly with a complete interface, I needed to rigorously test it in several host DAWs to ensure compatibility with a variety of parameter architectures, plugin file formats, and GUI hosting environments.
-                                    I also put the program through a series of stress tests to ensure it could handle a high amount of simulatenous parameter updates and various sample rates.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>7. Branding</h2>
-                                <p>
-                                    Branding <b>LaunchCodes</b> came naturally from the designed controls and assets, which indicate a font and thematic style to adhere to, namely tactical, weapon-focused imagery with sharp angles.
-                                    Creating a company image also followed suit, where <b>Armory</b> evoked the weapon-like products and daring nature of the product design.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>8. Website Design</h2>
-                                <p>
-                                    To allow users to explore its features and listen to sound demos, I created a website from scratch complete with animations, interactive assets, videos, and adhering to the style standards of the product itself.
-                                </p>
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-previous" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-next" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="feature-gallery">
+                                <div class="roadmap-box">
+                                    <h2>Overview</h2>
+                                    <p>Design period of 5 months</p>
+                                    <p>Solo project</p>
+                                    <p>Goal: to design and build an industry-standard audio production plugin, hostable in many digital audio workstations and intuitive to use for a wide user-base</p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>0. Needfinding</h2>
+                                    <p>
+                                        As an amateur music producer, finding a problem space in the audio plugin format was no issue.
+                                        An idea I had for a new track necessitated a tool that would let me synthesize a series of explosion sounds, with an array of effects and fine controls that would let me build a dynamic composition.
+                                        This problem implied a complex and challenging design and directly inspired my solution.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>1. Background Research</h2>
+                                    <p>
+                                        To point me in the right direction of a solution, I first researched existing solutions to the problem.
+                                        No audio plugin existed outright as a perfect fit, though I learned about what plugins other producers would use as part of a chain to achieve their desired sound.
+                                        Additionally, I reviewed a wide array of state-of-the-art plugins to understand what kinds of design inspire me and what falls short.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box" style="min-width: 250px">
+                                    <h2>2. Experience Prototype</h2>
+                                    <p>
+                                        My research prompted me to create an explosion synthesis chain with existing tools in my digital audio workstation—this chain consisted of two synthesis sources, four audio effects, and two modulation sources.
+                                        I experimented with what sounds it could create and began to understand which controls were necessary & intuitive, and obsolete & obscure.
+                                    </p>
+                                    <p>
+                                        This prototype showed me I wanted much more control with the distortion unit, less control of the reverb unit, and a dual-envelope view of both synthesis sources so I could keep track of the plugin state at a glance.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>3. Style Standards</h2>
+                                    <p>
+                                        In creating a tool for explosive sounds, I first gathered inspiration for UI elements from naval ship controls, depictions of nuclear bomb detonators, and traditional oscilloscopes.
+                                        This directed my choice of color palette, which draws from these tools, measurement instruments, warning lights, vintage monitors, and hardware buttons.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>4. UI Design</h2>
+                                    <p>
+                                        Over multiple iterations and several months, I designed vector assets and coded the complete interface with Juce/C++. 
+                                        UI components needed to balance readability, smooth control, flexibility, host parameter linking, and thematic consistency, and the overall layout needed to consider compactness, visual hierarchy, modularity (for reordering effects), and workflow.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>5. Audio Processing Architecture</h2>
+                                    <p>
+                                        Alongside UI design and following the final interface design, I researched existing documentation of anti-aliased oscillator synthesis, noise synthesis, realtime automatible filter design, and appropriate distortion algorithms for my target sound.
+                                        Eventually, I built six seperate processing classes that managed over 80 host parameters and performed thread-safe audio processing with state-of-the-art atomics management.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>6. Testing</h2>
+                                    <p>
+                                        With the program running smoothly with a complete interface, I needed to rigorously test it in several host DAWs to ensure compatibility with a variety of parameter architectures, plugin file formats, and GUI hosting environments.
+                                        I also put the program through a series of stress tests to ensure it could handle a high amount of simulatenous parameter updates and various sample rates.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>7. Branding</h2>
+                                    <p>
+                                        Branding <b>LaunchCodes</b> came naturally from the designed controls and assets, which indicate a font and thematic style to adhere to, namely tactical, weapon-focused imagery with sharp angles.
+                                        Creating a company image also followed suit, where <b>Armory</b> evoked the weapon-like products and daring nature of the product design.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>8. Website Design</h2>
+                                    <p>
+                                        To allow users to explore its features and listen to sound demos, I created a website from scratch complete with animations, interactive assets, videos, and adhering to the style standards of the product itself.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -362,8 +397,16 @@
                             </svg>
                             <p>Style Guide</p>
                         </div>
-                        <div class="menu-content">
-                            <img src="assets/images/launchcodes style guide.png" alt="Style guide for LaunchCodes">
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-left" width="25" height="390" viewBox="0 0 25 390" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-right" width="25" height="390" viewBox="0 0 25 390" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="menu-content">
+                                <img src="assets/images/launchcodes style guide.png" alt="Style guide for LaunchCodes">
+                            </div>
                         </div>
                     </div>
                 
@@ -414,15 +457,23 @@
                             </svg>
                             <p>Preview</p>
                         </div>
-                        <div class="feature-gallery">
-                            <img src="assets/melody meadows/practice technique.png" alt="Practicing Technique">
-                            <img src="assets/melody meadows/favorite pieces.png" alt="Favorite Pieces">
-                            <img src="assets/melody meadows/technique selection.png" alt="Technique Selection">
-                            <img src="assets/melody meadows/practice piece.png" alt="Practicing a Piece">
-                            <img src="assets/melody meadows/friends.png" alt="Friends">
-                            <img src="assets/melody meadows/visit friend.png" alt="Visiting a Friend">
-                            <img src="assets/melody meadows/select piece.png" alt="Selecting a Piece">
-                            <img src="assets/melody meadows/select part.png" alt="Selecting a Part">
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-previous" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-next" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="feature-gallery">
+                                <img src="assets/melody meadows/practice technique.png" alt="Practicing Technique">
+                                <img src="assets/melody meadows/favorite pieces.png" alt="Favorite Pieces">
+                                <img src="assets/melody meadows/technique selection.png" alt="Technique Selection">
+                                <img src="assets/melody meadows/practice piece.png" alt="Practicing a Piece">
+                                <img src="assets/melody meadows/friends.png" alt="Friends">
+                                <img src="assets/melody meadows/visit friend.png" alt="Visiting a Friend">
+                                <img src="assets/melody meadows/select piece.png" alt="Selecting a Piece">
+                                <img src="assets/melody meadows/select part.png" alt="Selecting a Part">
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -433,90 +484,98 @@
                             </svg>
                             <p>Roadmap</p>
                         </div>
-                        <div class="feature-gallery">
-                            <div>
-                                <h2>Overview</h2>
-                                <p>10 week design period</p>
-                                <p>Team of 4 designers</p>
-                                <p>Goal: to design a high fidelity prototype of a digitial solution to a modern global challenge</p>
-                            </div>
-                            <div>
-                                <h2>1. Background Research</h2>
-                                <p>In choosing a problem space such as music education for attention-disordered students, our literature review indicated game-ification and social networking were promising angles with which to design a solution.</p>
-                            </div>
-                            <div>
-                                <h2>2. Needfinding</h2>
-                                <p>Talking to several ADHD musicians taught us more about existing tools and habits they use to deepen and lengthen their music learning.</p>
-                            </div>
-                            <div>
-                                <h2>3. Solution Ideation</h2>
-                                <p>By building several POVs of our needfinding subjects, we considered a wide solution space including matchmaking systems, productivity software, and RPG games.</p>
-                            </div>
-                            <div>
-                                <h2>4. Experience Prototypes</h2>
-                                <p>Based on our early-stage proposed solution, we formulated several experiments with ADHD musicians testing questions we have about our solution space:</p>
-                                <ul>
-                                    <li>How long do they like spending to learn music?</li>
-                                    <li>How easily can they achieve a "flow state"?</li>
-                                    <li>Are they affected by "choice paralysis" when practicing music?</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2>5. Low-Fi Prototype</h2>
-                                <p>
-                                    Upon testing our assumptions, we chose <b>Melody Meadows</b> for its promise in achieving user flow states and helping users become invested in their learning.
-                                    Our first prototype focused on three tasks flows:
-                                </p>
-                                <ol>
-                                    <li>Learning a technique</li>
-                                    <li>Playing a song</li>
-                                    <li>Playing music with a friend</li>
-                                </ol>
-                                <p>Observing new subjects using this prototype showed us they became invested in the characters, but wanted more customizability in their lessons.</p>
-                            </div>
-                            <div>
-                                <h2>6. Med-Fi Prototype</h2>
-                                <p>
-                                    Increasing fidelity for us meant building our previous taskflows according to our formalized style sheet in Figma, and fleshing out the characters' world with basic top-down 2D graphics.
-                                    We also built out our tasks more elaborately, including designing for feedback from game characters while users are playing a song.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>7. Usability Study</h2>
-                                <p>
-                                    Testing our med-fi prototype with four target users showed us what was working &#40;namely, dialogue boxes with several branching options&#41;,
-                                    and what users wished for &#40;e.g. more inuitive instrument and music UI, town navigation, and more substance in the <i>playing with a friend</i> taskflow&#41;.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>8. Heuristic Evaluation</h2>
-                                <p>
-                                    An evaluation of our med-fi prototype by ourselves and four other design students yielded a total of 68 violations, spanning across 12 different design standard categories.
-                                    Some such violations indicated we should take inspiration from mobile game design in indicating certain character interactions, and to take inspiration from more static apps that have more consistent navigation icons.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>9. Med-Fi Redesign</h2>
-                                <p>
-                                    To address both the critiques voiced from usability study and the heuristic evaluation, we underwent a redesign focused on increasing the visibility of game state,
-                                    standardizing navigation, improving readability, and building out a more extensive <i>playing with a friend</i> taskflow.
-                                </p>
-                                <p>
-                                    We tested this redesign with three more target users who indicated the need for a more distinct technique-learning taskflow, separate from song-playing.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>10. Hi-Fi Prototype</h2>
-                                <p>
-                                    Our final prototype for <b>Melody Meadows</b> polished user experience by focusing on visual consistency to make the in-game environments more cohesive.
-                                    We designed a more distinct technique-learning taskflow and made navigation between tasks more simple with the use of a map.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>11. Website</h2>
-                                <p>
-                                    To showcase our design process and continue fleshing out our branding and design cohesion, we created a website outfitted with promotional motion graphics.
-                                </p>
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-previous" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-next" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="feature-gallery">
+                                <div class="roadmap-box">
+                                    <h2>Overview</h2>
+                                    <p>10 week design period</p>
+                                    <p>Team of 4 designers</p>
+                                    <p>Goal: to design a high fidelity prototype of a digitial solution to a modern global challenge</p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>1. Background Research</h2>
+                                    <p>In choosing a problem space such as music education for attention-disordered students, our literature review indicated game-ification and social networking were promising angles with which to design a solution.</p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>2. Needfinding</h2>
+                                    <p>Talking to several ADHD musicians taught us more about existing tools and habits they use to deepen and lengthen their music learning.</p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>3. Solution Ideation</h2>
+                                    <p>By building several POVs of our needfinding subjects, we considered a wide solution space including matchmaking systems, productivity software, and RPG games.</p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>4. Experience Prototypes</h2>
+                                    <p>Based on our early-stage proposed solution, we formulated several experiments with ADHD musicians testing questions we have about our solution space:</p>
+                                    <ul>
+                                        <li>How long do they like spending to learn music?</li>
+                                        <li>How easily can they achieve a "flow state"?</li>
+                                        <li>Are they affected by "choice paralysis" when practicing music?</li>
+                                    </ul>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>5. Low-Fi Prototype</h2>
+                                    <p>
+                                        Upon testing our assumptions, we chose <b>Melody Meadows</b> for its promise in achieving user flow states and helping users become invested in their learning.
+                                        Our first prototype focused on three tasks flows:
+                                    </p>
+                                    <ol>
+                                        <li>Learning a technique</li>
+                                        <li>Playing a song</li>
+                                        <li>Playing music with a friend</li>
+                                    </ol>
+                                    <p>Observing new subjects using this prototype showed us they became invested in the characters, but wanted more customizability in their lessons.</p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>6. Med-Fi Prototype</h2>
+                                    <p>
+                                        Increasing fidelity for us meant building our previous taskflows according to our formalized style sheet in Figma, and fleshing out the characters' world with basic top-down 2D graphics.
+                                        We also built out our tasks more elaborately, including designing for feedback from game characters while users are playing a song.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>7. Usability Study</h2>
+                                    <p>
+                                        Testing our med-fi prototype with four target users showed us what was working &#40;namely, dialogue boxes with several branching options&#41;,
+                                        and what users wished for &#40;e.g. more inuitive instrument and music UI, town navigation, and more substance in the <i>playing with a friend</i> taskflow&#41;.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>8. Heuristic Evaluation</h2>
+                                    <p>
+                                        An evaluation of our med-fi prototype by ourselves and four other design students yielded a total of 68 violations, spanning across 12 different design standard categories.
+                                        Some such violations indicated we should take inspiration from mobile game design in indicating certain character interactions, and to take inspiration from more static apps that have more consistent navigation icons.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>9. Med-Fi Redesign</h2>
+                                    <p>
+                                        To address both the critiques voiced from usability study and the heuristic evaluation, we underwent a redesign focused on increasing the visibility of game state,
+                                        standardizing navigation, improving readability, and building out a more extensive <i>playing with a friend</i> taskflow.
+                                    </p>
+                                    <p>
+                                        We tested this redesign with three more target users who indicated the need for a more distinct technique-learning taskflow, separate from song-playing.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>10. Hi-Fi Prototype</h2>
+                                    <p>
+                                        Our final prototype for <b>Melody Meadows</b> polished user experience by focusing on visual consistency to make the in-game environments more cohesive.
+                                        We designed a more distinct technique-learning taskflow and made navigation between tasks more simple with the use of a map.
+                                    </p>
+                                </div>
+                                <div class="roadmap-box">
+                                    <h2>11. Website</h2>
+                                    <p>
+                                        To showcase our design process and continue fleshing out our branding and design cohesion, we created a website outfitted with promotional motion graphics.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -528,8 +587,16 @@
                             </svg>
                             <p>Style Guide</p>
                         </div>
-                        <div class="menu-content">
-                            <img src="assets/melody meadows/melody meadows style guide.png" alt="Style Guide for Melody Meadows">
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-left" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-right" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="menu-content">
+                                <img src="assets/melody meadows/melody meadows style guide.png" alt="Style Guide for Melody Meadows">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -583,14 +650,22 @@
                             </svg>
                             <p>Preview</p>
                         </div>
-                        <div class="feature-gallery">
-                            <img style="border: none" src="assets/CoCo/welcome.png" alt="CoCo welcome page">
-                            <img src="assets/CoCo/poster.png" alt="CoCo poster">
-                            <img src="assets/CoCo/needfinding.png" alt="CoCo empathy map">
-                            <img style="border: none" src="assets/CoCo/user values.png" alt="CoCo user values">
-                            <img style="border: none" src="assets/CoCo/compare brands.png" alt="CoCo compare brands">
-                            <img style="border: none" src="assets/CoCo/news.png" alt="CoCo news">
-                            <img style="border: none" src="assets/CoCo/customize coco.png" alt="CoCo customize page">
+                        <div class="gallery-container">
+                            <svg class="scroll-button-left scroll-previous" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V390H25V0ZM16.4896 184.289L5.87866 194.899L16.4896 205.51L18.5433 203.457L9.98612 194.899L18.5433 186.342L16.4896 184.289Z"/>
+                            </svg>
+                            <svg class="scroll-button-right scroll-next" width="25" height="390" viewBox="0 0 25 390" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V390H0V0ZM8.51041 184.289L19.1213 194.899L8.51041 205.51L6.45668 203.457L15.0139 194.899L6.45668 186.342L8.51041 184.289Z"/>
+                            </svg>
+                            <div class="feature-gallery">
+                                <img style="border: none" src="assets/CoCo/welcome.png" alt="CoCo welcome page">
+                                <img src="assets/CoCo/poster.png" alt="CoCo poster">
+                                <img src="assets/CoCo/needfinding.png" alt="CoCo empathy map">
+                                <img style="border: none" src="assets/CoCo/user values.png" alt="CoCo user values">
+                                <img style="border: none" src="assets/CoCo/compare brands.png" alt="CoCo compare brands">
+                                <img style="border: none" src="assets/CoCo/news.png" alt="CoCo news">
+                                <img style="border: none" src="assets/CoCo/customize coco.png" alt="CoCo customize page">
+                            </div>
                         </div>
                     </div>
                     <!-- <div style="border-bottom: none">
@@ -699,70 +774,79 @@
         <div class="width-100p gray-gradient flex-row space-evenly align-center" style="height: 150px;">
             <p class="large-text tool-border" style="font-weight: 800">Etc.</p>
         </div>
-        <div id="etc-shelf">
-            <div class="etc-expandable">
-                <div class="etc-title-line">
-                    <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                        <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                    </svg>
-                    <h3>Laser-cut gloves</h3>
-                </div>
+        <div class="gallery-container">
+            <svg class="scroll-button-left scroll-left" style="top: 3px" width="25" height="597" viewBox="0 0 25 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0H0V600H25V0ZM16.6109 289L6 299.611L16.6109 310.222L18.6647 308.168L10.1075 299.611L18.6647 291.054L16.6109 289Z" fill="black"/>
+            </svg>
+            <svg class="scroll-button-right scroll-right" style="top: 3px" width="25" height="597" viewBox="0 0 25 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H25V600H0V0ZM8.38907 289L19 299.611L8.38907 310.222L6.33534 308.168L14.8925 299.611L6.33534 291.054L8.38907 289Z" fill="black"/>
+            </svg>
                 
-                <div class="etc-basics">
-                    <img src="assets/images/pinned glove back.png" alt="Laser-cut Lace Opera Glove">
-                    <p>Lace opera gloves, laser-cut on black nylon with an algorithmically generated Voronoi diagram pattern and hand-stitched.</p>
+            <div id="etc-shelf">
+                <div class="etc-expandable">
+                    <div class="etc-title-line">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <h3>Laser-cut gloves</h3>
+                    </div>
+                    
+                    <div class="etc-basics">
+                        <img src="assets/images/pinned glove back.png" alt="Laser-cut Lace Opera Glove">
+                        <p>Lace opera gloves, laser-cut on black nylon with an algorithmically generated Voronoi diagram pattern and hand-stitched.</p>
+                    </div>
+                    <img src="assets/images/printing.png" alt="Printing pattern">
+                    <img src="assets/images/on hand.png" alt="Pattern on my hand">
+                    <img src="assets/images/pinned glove front.png" alt="Glove pinned on my hand">
+                    <img src="assets/images/stitched glove front.png" alt="Glove on my hand">
                 </div>
-                <img src="assets/images/printing.png" alt="Printing pattern">
-                <img src="assets/images/on hand.png" alt="Pattern on my hand">
-                <img src="assets/images/pinned glove front.png" alt="Glove pinned on my hand">
-                <img src="assets/images/stitched glove front.png" alt="Glove on my hand">
-            </div>
-            <div class="etc-expandable">
-                <div class="etc-title-line">
-                    <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
-                        <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
-                    </svg>
-                    <h3>Digital Fabric</h3>
-                </div>
-                
-                <div class="etc-basics">
+                <div class="etc-expandable">
+                    <div class="etc-title-line">
+                        <svg class="more-icon" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 137.5H274.5" stroke="#21232E" stroke-width="50"/>
+                            <path d="M137.25 274.75L137.25 0.25" stroke="#21232E" stroke-width="50"/>
+                        </svg>
+                        <h3>Digital Fabric</h3>
+                    </div>
+                    
+                    <div class="etc-basics">
+                        <img src="assets/images/digital fabric 1.png" alt="Digital fabric">
+                        <p>Procedurally generated pleated fabric texture tool, built in Processing.</p>
+                    </div>
                     <img src="assets/images/digital fabric 1.png" alt="Digital fabric">
-                    <p>Procedurally generated pleated fabric texture tool, built in Processing.</p>
+                    <img src="assets/images/digital fabric 2.png" alt="Digital fabric">
+                    <img src="assets/images/digital fabric 3.png" alt="Digital fabric">
                 </div>
-                <img src="assets/images/digital fabric 1.png" alt="Digital fabric">
-                <img src="assets/images/digital fabric 2.png" alt="Digital fabric">
-                <img src="assets/images/digital fabric 3.png" alt="Digital fabric">
-            </div>
-            <div>
-                <div class="etc-title-line">
-                    <a href="https://ccrma.stanford.edu/~bskiff/220b/final/" target="_blank"><h3 style="text-decoration: underline"><i>I'm Not The Same</i></h3></a>
+                <div>
+                    <div class="etc-title-line">
+                        <a href="https://ccrma.stanford.edu/~bskiff/220b/final/" target="_blank"><h3 style="text-decoration: underline"><i>I'm Not The Same</i></h3></a>
+                    </div>
+                    
+                    <div class="etc-basics">
+                        <img src="assets/images/im not the same.png" alt="Still from I'm Not The Same">
+                        <p>A performed musical piece for self-designed synthesizer and sampler algorithm, built in ChucK and Processing.</p>
+                    </div>
                 </div>
-                
-                <div class="etc-basics">
-                    <img src="assets/images/im not the same.png" alt="Still from I'm Not The Same">
-                    <p>A performed musical piece for self-designed synthesizer and sampler algorithm, built in ChucK and Processing.</p>
+                <div>
+                    <div class="etc-title-line">
+                        <a href="https://220afinal-dec3.glitch.me/" target="_blank"><h3 style="text-decoration: underline">Grain Grid</h3></a>
+                    </div>
+                    
+                    <div class="etc-basics">
+                        <img src="assets/images/grain grid.png" alt="Grain Grid">
+                        <p>A simple mini-website tool for responsive live granular synthesis, built with Web Audio.</p>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="etc-title-line">
-                    <a href="https://220afinal-dec3.glitch.me/" target="_blank"><h3 style="text-decoration: underline">Grain Grid</h3></a>
-                </div>
-                
-                <div class="etc-basics">
-                    <img src="assets/images/grain grid.png" alt="Grain Grid">
-                    <p>A simple mini-website tool for responsive live granular synthesis, built with Web Audio.</p>
-                </div>
-            </div>
-            <div style="cursor: default">
-                <div class="etc-title-line">
-                    <h3>Flask</h3>
-                </div>
-                
-                <div class="etc-basics">
-                    <img src="assets/images/daft punk flask.png" alt="Daft Punk Flask">
-                    <p>Daft Punk vinyl design on flask, birthday gift, made with Illustrator and Cricut.</p>
+                <div style="cursor: default">
+                    <div class="etc-title-line">
+                        <h3>Flask</h3>
+                    </div>
+                    
+                    <div class="etc-basics">
+                        <img src="assets/images/daft punk flask.png" alt="Daft Punk Flask">
+                        <p>Daft Punk vinyl design on flask, birthday gift, made with Illustrator and Cricut.</p>
+                    </div>
                 </div>
             </div>
         </div>

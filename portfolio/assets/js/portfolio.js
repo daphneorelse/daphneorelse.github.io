@@ -122,6 +122,139 @@ $("#shooting-gallery").on("mousemove", function(e)
 
 });
 
+function isInViewport(element, gallery) 
+{
+    // console.log("Element width: " + element.outerWidth());
+
+    var elementLeft = element.position().left;
+    var elementRight = elementLeft + element.innerWidth();
+
+    var galleryLeft = gallery.scrollLeft();
+    var galleryRight = galleryLeft + gallery.outerWidth();
+
+    // const visible = elementLeft < galleryRight && elementRight > galleryLeft;
+    visible = elementLeft < gallery.outerWidth() && elementRight > 0;
+
+    // if (visible)
+    // {
+    //     console.log("alt: " + element.prop("alt") + ", Element left: " + elementLeft + ", Element right: " + elementRight);
+    // }
+
+    return visible;
+};
+
+function getScrollDistance(gallery)
+{
+    let scrollDistance = 400;
+    gallery.children().each(function() {
+        if (isInViewport($(this), gallery))
+        {
+            scrollDistance = $(this).outerWidth();
+        }
+    });
+
+    return scrollDistance;
+}
+
+$(".scroll-button-right, .scroll-button-left").on("mouseenter", function()
+{
+    $(this).css({"opacity": "40%"});
+
+}).on("mouseleave", function()
+{
+    $(this).css({"opacity": "15%"});
+})
+
+$(".scroll-next").on("mousedown", function()
+{
+    let gallery = $(this).siblings(".feature-gallery");
+
+    let scrollDistance = 400;
+    let found = false;
+    gallery.children().each(function() {
+        if (isInViewport($(this), gallery) && !found)
+        {
+            const pos = $(this).next().position();
+            if (pos)
+            {
+                scrollDistance = pos.left - 20;
+            }
+            found = true;
+        }
+    });
+        
+    gallery.get(0).scrollLeft += scrollDistance;
+});
+
+$(".scroll-previous").on("mousedown", function()
+{
+
+    let gallery = $(this).siblings(".feature-gallery");
+
+    let scrollDistance = 0;
+    let found = false;
+    gallery.children().each(function() {
+        if (isInViewport($(this), gallery) && !found)
+        {
+            if ($(this).position().left > -1)
+            {
+                const pos = $(this).prev().position();
+                if (pos)
+                {
+                    scrollDistance = pos.left - 20;
+                }
+            }
+            else
+            {
+                const pos = $(this).position();
+                if (pos)
+                {
+                    scrollDistance = pos.left - 20;
+                }
+            }
+            found = true;
+        }
+    });
+        
+    gallery.get(0).scrollLeft += scrollDistance;
+});
+
+let intervalID;
+const scrollDistance = 2;
+const scrollInterval = 2;
+
+$(".scroll-right").on("mousedown", function()
+{
+    let scrollContainer = $(this).siblings(".menu-content, #etc-shelf").get(0);
+
+    scrollContainer.scrollLeft += scrollDistance; 
+
+    intervalID = setInterval(function() 
+    { 
+        scrollContainer.scrollLeft += scrollDistance; 
+    }, scrollInterval);
+    
+}).on("mouseup", function()
+{
+    clearInterval(intervalID);
+});
+
+$(".scroll-left").on("mousedown", function()
+{
+    let scrollContainer = $(this).siblings(".menu-content, #etc-shelf").get(0);
+
+    scrollContainer.scrollLeft -= scrollDistance;
+
+    intervalID = setInterval(function() 
+    { 
+        scrollContainer.scrollLeft -= scrollDistance; 
+    }, scrollInterval);
+    
+}).on("mouseup", function()
+{
+    clearInterval(intervalID);
+});
+
 function toggleMore(section, select)
 {
     let icon = $(section).find(".more-icon");
