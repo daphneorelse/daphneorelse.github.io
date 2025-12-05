@@ -4,8 +4,12 @@ const css_white = root_styles.getPropertyValue('--white');
 const css_contrast = root_styles.getPropertyValue('--dark-contrast');
 const css_red = root_styles.getPropertyValue('--red');
 const css_lightGreen = root_styles.getPropertyValue('--light-green');
+const css_secondary = root_styles.getPropertyValue('--background-color-secondary');
 const css_lightestRed = root_styles.getPropertyValue('--lightest-red');
 const css_lightestGray = root_styles.getPropertyValue('--lightest-gray');
+const css_lightFlesh = root_styles.getPropertyValue('--light-flesh');
+const css_lightestFlesh = root_styles.getPropertyValue('--lightest-flesh');
+const css_mediumBurnt = root_styles.getPropertyValue('--medium-burnt');
 
 const slice_map = new Map([["a-slice", "#slice-1"], ["r-1-slice", "#slice-2"], ["m-1-slice", "#slice-3"], 
     ["m-2-slice", "#slice-4"], ["m-3-slice", "#slice-5"], ["o-slice", "#slice-6"], ["r-2-slice", "#slice-7"], ["y-slice", "#slice-8"]]);
@@ -20,6 +24,10 @@ $(function()
     {
         if (document.location.hash === "#info")
         {
+            selected_tab = 2;
+        }
+        else if (document.location.hash === "#launchcodes")
+        {
             selected_tab = 1;
         }
         else
@@ -27,7 +35,7 @@ $(function()
             selected_tab = 0;
         }
 
-        setTimeout(newTabSelected(), 100);
+        setTimeout(newTabSelected(), 250);
     }
 });
 
@@ -35,7 +43,7 @@ $("#logo-1-bounds").on("mouseenter", function()
 {
     $(this).find("#crosshair-horizontal").css({"x": "50px", "width" : "800px"}); // mobile doesn't like x/y attr, maybe redo as animation with translate
     $(this).find("#crosshair-vertical"  ).css({"y": "-90px", "height": "340px"});
-    $(this).find("#crosshair").children().css({"fill": css_red});
+    $(this).find("#crosshair").children().css({"fill": css_mediumBurnt});
     $(this).find("#a-crossing").css({"transform": "scaleX(0)"});
     $(this).find(".logo-flags").find("path").css({"transform": "translateX(16px)"});
     
@@ -106,7 +114,7 @@ $("#logo-3-bounds").on("mouseleave", function()
 
 function newTabSelected()
 {
-    if (selected_tab === 2)
+    if (selected_tab === 3)
     {
         window.location.href = "../../portfolio";
         return;
@@ -114,6 +122,25 @@ function newTabSelected()
 
     let navItem = $(".nav-item").eq(selected_tab);
     $("#nav-highlight").css({"left": navItem.position().left, "width": navItem.css("width")});
+    $(".nav-item").css({"color": css_contrast});
+    switch (selected_tab)
+        {
+            case 0:
+                $("#nav-bar").css({"background-color": css_lightestFlesh});
+                $(".nav-item").eq(selected_tab).css({"color": css_lightestFlesh});
+                $("#title-screen").css({"background-color": css_lightestFlesh});
+                break;
+            case 1:
+                $("#nav-bar").css({"background-color": css_secondary});
+                $(".nav-item").eq(selected_tab).css({"color": css_secondary});
+                $("#title-screen").css({"background-color": css_secondary});
+                break;
+            case 2:
+                $("#nav-bar").css({"background-color": css_secondary});
+                $(".nav-item").eq(selected_tab).css({"color": css_secondary});
+                $("#title-screen").css({"background-color": css_secondary});
+                break;
+        }
 
     let contentSection = $("#content-section");
     contentSection.css({"opacity": 0});
@@ -122,17 +149,23 @@ function newTabSelected()
         switch (selected_tab)
         {
             case 0:
+                contentSection.load("../../turntablesaw.html");
+                document.location.hash = "turntablesaw";
+                break;
+            case 1:
                 contentSection.load("../../launchcodes.html");
                 document.location.hash = "launchcodes";
                 break;
-            case 1:
+            case 2:
                 contentSection.load("../../info.html");
                 document.location.hash = "info";
                 break;
         }
-
-        contentSection.css({"opacity": 1});
     }, "500");
+    setTimeout(() =>
+    {
+        contentSection.css({"opacity": 1});
+    }, "750");
 };
 
 $(".nav-item").on("mousedown", function()
@@ -151,18 +184,18 @@ $(".nav-item").on("mousedown", function()
 
 }).on("mouseenter", function()
 {
-    $(this).css({"color": css_red});
+    // $(this).css({"color": css_mediumBurnt});
     // $(this).css({"transform": "skewX(-17deg"});
 
 }).on("mouseleave", function()
 {
-    $(this).css({"color": css_contrast});
+    // $(this).css({"color": css_contrast});
     // $(this).css({"transform": "skewX(0deg"});
 });
 
 // $("#content-section").on("mouseenter", "#launchcodes-logo", function()
 // {
-//     $(this).find("#crosshair").css({"fill": css_red});
+//     $(this).find("#crosshair").css({"fill": css_mediumBurnt});
 
 // }).on("mouseleave", "#launchcodes-logo", function()
 // {
@@ -189,7 +222,6 @@ function selectTourArea(index)
     allDescriptions.css({"filter": "brightness(0.5)"});
     const selectedDescription = allDescriptions.eq(index);
     selectedDescription.css({"filter": "brightness(1.0)"});
-    // selectedDescription.toggleClass("selected-border");
 
     const menu = $("#tour-description-menu");
     const itemHeight = selectedDescription.height() + parseInt(selectedDescription.css("padding")) * 2;
@@ -267,6 +299,39 @@ $("#content-section").on("mouseenter", ".tour-item", function()
 {
     const index = $(".tour-item").index($(this));
     deselectTourArea(index);
+});
+
+function fadeInTourAreaTTS(index) {
+    const itemToShow = $(".tour-item-tts").eq(index);
+    $(".tour-item-tts").css({"opacity": "0%"});
+    itemToShow.css({"opacity": "100%"});
+}
+
+$("#content-section").on("mouseenter", ".tour-highlight-area-tts", function()
+{
+    const index = $(".tour-highlight-area-tts").index($(this));
+    fadeInTourAreaTTS(index + 1);
+    const area = $(this);
+
+    const video = area.find($("video"));
+    video.css({"opacity": "100%"});
+    video.trigger("load");
+    video.trigger("play");
+    $(".red-corner").css({"opacity": "100%"});
+    $(".red-corner").eq(0).css({"left": area.css("left"), "top": area.css("top")});
+    $(".red-corner").eq(1).css({"right": area.css("right"), "top": area.css("top")});
+    $(".red-corner").eq(2).css({"right": area.css("right"), "bottom": area.css("bottom")});
+    $(".red-corner").eq(3).css({"left": area.css("left"), "bottom": area.css("bottom")});
+
+}).on("mouseleave", ".tour-highlight-area-tts", function()
+{
+    fadeInTourAreaTTS(0);
+
+    const video = $(this).find($("video"));
+    video.trigger("stop");
+    video.css({"opacity": "0%"});
+    
+    $(".red-corner").css({"opacity": "0%"});
 });
 
 function resetFeatures()
