@@ -35,7 +35,7 @@ $(function()
             selected_tab = 0;
         }
 
-        setTimeout(newTabSelected(), 250);
+        setTimeout(newTabSelected, 500);
     }
 });
 

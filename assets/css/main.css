@@ -1949,7 +1949,8 @@ a
 
     .small-responsive-width
     {
-        width: 60vw;
+        max-width: 80vw;
+        width: 500px;
     }
 
     .responsive-grid
@@ -1979,7 +1980,8 @@ a
 
     .small-responsive-width
     {
-        width: 30vw;
+        max-width: 30vw;
+        width: 500px;
     }
 
     .responsive-grid
@@ -2319,6 +2321,11 @@ a
     width: fit-content;
 }
 
+.fit-height
+{
+    height: fit-content
+}
+
 .border-box
 {
     box-sizing: border-box;
@@ -2366,6 +2373,15 @@ a
         to bottom,
         var(--light-green) 0%,
         var(--lightest-gray) 100%
+    );
+}
+
+.flesh-gradient
+{
+    background: linear-gradient(
+        to top,
+        var(--white) 90%,
+        var(--lightest-flesh) 100%
     );
 }
 
@@ -2444,6 +2460,11 @@ a
     text-shadow: 2px 2x 2px var(--dark-contrast);
 }
 
+.flesh-shadow
+{
+    filter: drop-shadow(0px 0px 10px var(--lightest-flesh));
+}
+
 .standard-content-width
 {
     width: 90vw; 
@@ -2507,6 +2528,14 @@ a
 .tool-border
 {
     border: 20px solid transparent;
+    border-image: url(../images/tool\ border\ dark\ contrast.png) 25% round;
+    background-clip: padding-box;
+}
+
+.tech-border
+{
+    border-top: 17px solid transparent;
+    border-left: 17px solid transparent;
     border-image: url(../images/tool\ border\ dark\ contrast.png) 25% round;
     background-clip: padding-box;
 }
