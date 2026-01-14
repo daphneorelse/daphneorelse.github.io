@@ -410,9 +410,9 @@ h2
 #content-section
 {
     width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     position: relative;
     transition: opacity 250ms;
     overflow-x: hidden;
