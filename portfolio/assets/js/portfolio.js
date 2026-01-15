@@ -8,6 +8,64 @@ const css_lightestRed = root_styles.getPropertyValue('--lightest-red');
 const css_lightestGray = root_styles.getPropertyValue('--lightest-gray');
 const css_transparent = "rgba(0,0,0,0)";
 
+const breakpoints = {
+  mobile: window.matchMedia("(max-width: 420px)"),
+  tablet: window.matchMedia("(min-width: 421px) and (max-width: 940px)"),
+  desktop: window.matchMedia("(min-width: 941px)")
+};
+
+function applyLayout() {
+  if (breakpoints.desktop.matches) {
+    setDesktopLayout();
+  } else if (breakpoints.tablet.matches) {
+    setTabletLayout();
+  } else {
+    setMobileLayout();
+  }
+}
+
+applyLayout();
+
+Object.values(breakpoints).forEach(mq => {
+  mq.addEventListener("change", applyLayout);
+});
+
+function setMobileLayout() {
+    $(".expand-icon").each(function() {
+        if (!$(this).prop("expanded"))
+        {
+            $(this).parent(".portfolio-feature").find(".feature-menu").css({"opacity": "0%"});
+        }
+    });
+    resizeOpenGallery();
+}
+
+function setTabletLayout() {
+    $(".expand-icon").each(function() {
+        if (!$(this).prop("expanded"))
+        {
+            $(this).parent(".portfolio-feature").find(".feature-menu").css({"opacity": "0%"});
+        }
+    });
+    resizeOpenGallery();
+}
+
+function setDesktopLayout() {
+    $(".feature-menu").css({"opacity": "100%"});
+    resizeOpenGallery();
+}
+
+function resizeOpenGallery()
+{
+    $(".more-icon").each(function() {
+        let section = $(this).parent().parent();
+        if (section.prop("open"))
+        {
+            sizeSection(section);
+        }
+    });
+}
+
 $(function()
 {
     $(".portfolio-feature").each(function() { sizeFeature($(this)); });
@@ -255,6 +313,22 @@ $(".scroll-left").on("mousedown", function()
     clearInterval(intervalID);
 });
 
+function sizeSection(section)
+{
+    if (breakpoints.mobile.matches)
+    {
+        section.css({"height": "272px"});
+    }
+    else if (breakpoints.tablet.matches)
+    {
+        section.css({"height": "322px"});
+    }
+    else if (breakpoints.desktop.matches)
+    {
+        section.css({"height": "422px"});
+    }
+}
+
 function toggleMore(section, select)
 {
     let icon = $(section).find(".more-icon");
@@ -263,7 +337,7 @@ function toggleMore(section, select)
     {
         $(section).prop("open", true);
         icon.find("path").eq(1).css({"transform": "rotate(90deg)"});
-        section.css({"height": "422px"});
+        sizeSection(section);
         section.find(".feature-gallery").css({"opacity": "100%"});
         maximizeFeature($(section).parents(".portfolio-feature"));
     }
@@ -304,8 +378,6 @@ $(window).on("resize", function()
     $(".portfolio-feature").each(function() { sizeFeature($(this)); });
 });
 
-var smallWindow = window.matchMedia("(max-width: 940px)");
-
 function sizeFeature(feature)
 {
     const expandedHeight = Math.max($(feature).find(".feature-basics").innerHeight() + 150, 600);
@@ -313,13 +385,13 @@ function sizeFeature(feature)
 
     if ($(feature).find(".expand-icon").prop("expanded"))
     {
-        if (smallWindow.matches)
+        if (breakpoints.desktop.matches)
         {
-            $(feature).css({"height": "fit-content"});
+            $(feature).css({"height": expandedHeight});
         }
         else
         {
-            $(feature).css({"height": expandedHeight});
+            $(feature).css({"height": "fit-content"});
         }
     }
     else
@@ -335,7 +407,7 @@ function maximizeFeature(feature)
     });
     $(feature).find(".feature-menu").css({"width": "100%"});
 
-    if (smallWindow.matches)
+    if (breakpoints.mobile.matches || breakpoints.tablet.matches)
     {
         $(feature).find(".feature-menu").css({"opacity": "100%"});
     }
@@ -353,7 +425,7 @@ function minimizeFeature(feature)
     $(feature).find(".feature-description").css({"left": "-20px", "opacity": "0%"});
     $(feature).find(".feature-menu").css({"width": "50%"});
 
-    if (smallWindow.matches)
+    if (breakpoints.mobile.matches || breakpoints.tablet.matches)
     {
         $(feature).find(".feature-menu").css({"opacity": "0%"});
     }

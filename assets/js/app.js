@@ -18,6 +18,46 @@ let knifeThrown = false;
 
 let selected_tab = 0;
 
+const breakpoints = {
+  mobile: window.matchMedia("(max-width: 420px)"),
+  tablet: window.matchMedia("(min-width: 421px) and (max-width: 940px)"),
+  desktop: window.matchMedia("(min-width: 941px)")
+};
+
+function applyLayout() {
+  if (breakpoints.desktop.matches) {
+    setDesktopLayout();
+  } else if (breakpoints.tablet.matches) {
+    setTabletLayout();
+  } else {
+    setMobileLayout();
+  }
+}
+
+applyLayout();
+
+Object.values(breakpoints).forEach(mq => {
+  mq.addEventListener("change", applyLayout);
+});
+
+function setMobileLayout() {
+    resizeNavHighlight();
+}
+
+function setTabletLayout() {
+    resizeNavHighlight();
+}
+
+function setDesktopLayout() {
+    resizeNavHighlight();
+}
+
+function resizeNavHighlight()
+{
+    let navItem = $(".nav-item").eq(selected_tab);
+    $("#nav-highlight").css({"left": navItem.position().left, "width": navItem.css("width")});
+}
+
 $(function()
 {
     if (this.location.pathname !== "/launchcodes-download/" && this.location.pathname!== "/portfolio/")
@@ -120,8 +160,7 @@ function newTabSelected()
         return;
     }
 
-    let navItem = $(".nav-item").eq(selected_tab);
-    $("#nav-highlight").css({"left": navItem.position().left, "width": navItem.css("width")});
+    resizeNavHighlight();
     $(".nav-item").css({"color": css_contrast});
     switch (selected_tab)
         {
@@ -301,10 +340,17 @@ $("#content-section").on("mouseenter", ".tour-item", function()
     deselectTourArea(index);
 });
 
+var smallWindow = window.matchMedia("(max-width: 940px)");
+
 function fadeInTourAreaTTS(index) {
     const itemToShow = $(".tour-item-tts").eq(index);
     $(".tour-item-tts").css({"opacity": "0%"});
     itemToShow.css({"opacity": "100%"});
+
+    if (smallWindow.matches) {
+        $("#tour-section").css({"height": itemToShow.height() + $("#tour-container").height() + 80 + "px"});
+    }
+    
 }
 
 $("#content-section").on("mouseenter", ".tour-highlight-area-tts", function()
