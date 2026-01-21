@@ -470,7 +470,7 @@ $("#content-section").on("mousedown", "#big-red-button", function()
 }).on("mouseup", "#big-red-button", function()
 {
     $(this).attr({"src": "../../assets/images/big red button standby.svg"});
-    window.location.href = "../../launchcodes-download";
+    window.open('https://armoryplugins.gumroad.com/l/LaunchCodes', '_blank');
 });
 
 $("#content-section").on("mouseenter", ".contact-item", function()

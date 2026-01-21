@@ -182,21 +182,13 @@ $("#shooting-gallery").on("mousemove", function(e)
 
 function isInViewport(element, gallery) 
 {
-    // console.log("Element width: " + element.outerWidth());
-
     var elementLeft = element.position().left;
     var elementRight = elementLeft + element.innerWidth();
 
     var galleryLeft = gallery.scrollLeft();
     var galleryRight = galleryLeft + gallery.outerWidth();
 
-    // const visible = elementLeft < galleryRight && elementRight > galleryLeft;
-    visible = elementLeft < gallery.outerWidth() && elementRight > 0;
-
-    // if (visible)
-    // {
-    //     console.log("alt: " + element.prop("alt") + ", Element left: " + elementLeft + ", Element right: " + elementRight);
-    // }
+    visible = elementLeft < gallery.outerWidth() - 5 && elementRight > 5;
 
     return visible;
 };
