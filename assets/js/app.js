@@ -1,3 +1,8 @@
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { clamp, lerp } from 'three/src/math/MathUtils';
+
+// Color Constants
 const root = document.querySelector(':root');
 const root_styles = getComputedStyle(root);
 const css_white = root_styles.getPropertyValue('--white');
@@ -9,8 +14,10 @@ const css_lightestRed = root_styles.getPropertyValue('--lightest-red');
 const css_lightestGray = root_styles.getPropertyValue('--lightest-gray');
 const css_lightFlesh = root_styles.getPropertyValue('--light-flesh');
 const css_lightestFlesh = root_styles.getPropertyValue('--lightest-flesh');
+const css_mediumFlesh = root_styles.getPropertyValue('--medium-flesh');
 const css_mediumBurnt = root_styles.getPropertyValue('--medium-burnt');
 
+// CSS Animation Variables
 const slice_map = new Map([["a-slice", "#slice-1"], ["r-1-slice", "#slice-2"], ["m-1-slice", "#slice-3"], 
     ["m-2-slice", "#slice-4"], ["m-3-slice", "#slice-5"], ["o-slice", "#slice-6"], ["r-2-slice", "#slice-7"], ["y-slice", "#slice-8"]]);
 let slice_set = new Set();
@@ -18,6 +25,7 @@ let knifeThrown = false;
 
 let selected_tab = 0;
 
+// Breakpoint Logic
 const breakpoints = {
   mobile: window.matchMedia("(max-width: 420px)"),
   tablet: window.matchMedia("(min-width: 421px) and (max-width: 940px)"),
@@ -58,9 +66,193 @@ function resizeNavHighlight()
     $("#nav-highlight").css({"left": navItem.position().left, "width": navItem.css("width")});
 }
 
+// Three.js Saw Scene
+const scene = new THREE.Scene();
+
+const sawContainer = document.getElementById("saw-container");
+
+const aspect =
+    sawContainer.clientWidth /
+    sawContainer.clientHeight;
+
+const frustumSize = 3;
+
+const camera = new THREE.OrthographicCamera(
+    -frustumSize * aspect / 2,
+    frustumSize * aspect / 2,
+    frustumSize / 2,
+    -frustumSize / 2,
+    0.1,
+    100
+);
+camera.position.set(0, 0, 1);
+camera.lookAt(0, 0, 0);
+// camera.rotation.set(-Math.PI / 2 + 0.3, 0, 0);
+
+const renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    alpha: true
+});
+// renderer.setSize(sawContainer.clientWidth, sawContainer.clientHeight);
+sawContainer.appendChild(renderer.domElement);
+
+const ambient = new THREE.AmbientLight(
+    0xffffff,
+    6
+);
+scene.add(ambient);
+// const directional =
+//     new THREE.DirectionalLight(
+//         0xffffff,
+//         10
+//     );
+// directional.position.set(
+//     2,
+//     2,
+//     2
+// );
+// scene.add(directional);
+
+const loader = new GLTFLoader();
+let sawModel;
+let sawBlade;
+let faderHandle;
+let sawSize;
+loader.load(
+    'assets/models/saw.glb',
+    (gltf) => {
+        sawModel = gltf.scene;
+        scene.add(sawModel);
+
+        const box = new THREE.Box3().setFromObject(sawModel);
+        sawSize = box.getSize(new THREE.Vector3());
+
+        sawModel.rotation.x = Math.PI / 2 - 0.3;
+        // sawModel.scale.setScalar(0.5);
+        // gltf.scene.traverse((object) => {
+        //     console.log(object.name);
+        // })
+        // sawModel.rotation.y = -Math.PI / 8;
+        sawBlade = gltf.scene.getObjectByName("Saw_Center004");
+        
+        sawBlade.rotation.y = Math.PI / 2;
+        faderHandle = gltf.scene.getObjectByName("Fader_Handle003");
+
+        
+    }
+);
+
+let needsResize = false;
+function setNeedsResize() { needsResize = true; };
+
+function resizeRenderer() {
+
+    // console.log($("#saw-container").width());
+    const width = $("#saw-container").width();
+    const height = $("#saw-container").height();
+    const aspect = width / height;
+    renderer.setSize(width, height, false);
+
+    camera.left = -frustumSize * aspect / 2;
+    camera.right = frustumSize * aspect / 2;
+    camera.top = frustumSize / 2;
+    camera.bottom = -frustumSize / 2;
+
+    camera.updateProjectionMatrix();
+
+    const visibleWidth = camera.right - camera.left;
+    // console.log("width ", visibleWidth);
+    const visibleHeight = camera.top - camera.bottom;
+    // console.log("height ", visibleHeight);
+
+    sawModel.scale.setScalar(Math.min(visibleWidth, visibleHeight) * 0.9 / sawSize.x);
+}
+
+new ResizeObserver(setNeedsResize).observe(sawContainer);
+
+// function screenToWorld(x, y) {
+//     const vector = new THREE.Vector3(
+//             x * 2 - 1,
+//             -(y * 2 - 1),
+//             0
+//         );
+
+//     vector.unproject(camera);
+
+//     return vector;
+// }
+
+const timer = new THREE.Timer();
+
+let lastScrollY = 0;
+let angularVelocity = -2;
+
+// let targetScale = 1;
+// let currentScale = 1;
+// let targetPositionX = 0;
+// let currentPositionX = 0;
+// let targetPositionY = 0;
+// let currentPositionY = 0;
+
+window.addEventListener("scroll", () => {
+
+    const delta = window.scrollY - lastScrollY;
+    lastScrollY = window.scrollY;
+    angularVelocity += delta * 0.0004;
+
+    // const visibleWidth = camera.right - camera.left;
+    // const visibleHeight = camera.top - camera.bottom;
+
+    // if (window.scrollY > $("#body-section").offset().top)
+    // {
+    //     // targetScale = visibleWidth * 0.4 / sawSize.x;
+    //     targetScale = $("#nav-bar").height() / $(window).height() * visibleHeight;
+    //     // const corner = screenToWorld(0, 0);
+
+    //     const box = new THREE.Box3().setFromObject(sawModel);
+    //     targetPositionX = camera.left - box.min.x;
+    //     targetPositionY = camera.top - box.max.y;
+    // }
+    // else 
+    // {
+    //     targetScale = 1;
+    //     targetPositionX = 0;
+    //     targetPositionY = 0;
+    // }
+});
+
+function animate(timestamp) {
+    requestAnimationFrame(animate);
+
+    timer.update(timestamp);
+
+    if (sawBlade)
+    {
+        if (needsResize)
+        {
+            resizeRenderer();
+        }
+
+        const delta = timer.getDelta();
+        const rotationDelta = delta * 0.25;
+        sawBlade.rotation.y += clamp(angularVelocity + rotationDelta, -0.1, 0.1);
+        angularVelocity *= 0.95;
+
+        const faderPosNorm = Math.sin(timer.getElapsed());
+        faderHandle.position.z = lerp(0.79, 0.6, faderPosNorm);
+
+        // sawModel.rotation.y = faderPosNorm * 0.03;
+    }
+
+    renderer.render(scene, camera);
+}
+
+requestAnimationFrame(animate);
+
+// On-Load
 $(function()
 {
-    if (this.location.pathname !== "/launchcodes-download/" && this.location.pathname!== "/portfolio/")
+    if (this.location.pathname !== "/launchcodes-download/")
     {
         if (document.location.hash === "#info")
         {
@@ -91,7 +283,7 @@ $("#logo-1-bounds").on("mouseenter", function()
 {
     $(this).find("#crosshair-horizontal").css({"x": "400", "width" : "137"});
     $(this).find("#crosshair-vertical"  ).css({"y": "0",   "height": "164"});
-    $(this).find("#crosshair").children().css({"fill": css_contrast});
+    $(this).find("#crosshair").children().css({"fill": css_mediumFlesh});
     $(this).find("#a-crossing").css({"transform": "scaleX(1)"});
     $(this).find(".logo-flags").find("path").css({"transform": "translateX(0px)"});
 
@@ -154,32 +346,33 @@ $("#logo-3-bounds").on("mouseleave", function()
 
 function newTabSelected()
 {
-    if (selected_tab === 3)
-    {
-        window.location.href = "../../portfolio";
-        return;
-    }
+    // if (selected_tab === 3)
+    // {
+    //     window.location.href = "../../portfolio";
+    //     return;
+    // }
 
     resizeNavHighlight();
     $(".nav-item").css({"color": css_contrast});
+    let newColor;
     switch (selected_tab)
         {
             case 0:
-                $("#nav-bar").css({"background-color": css_lightestFlesh});
-                $(".nav-item").eq(selected_tab).css({"color": css_lightestFlesh});
-                $("#title-screen").css({"background-color": css_lightestFlesh});
+                newColor = css_lightestFlesh;
                 break;
             case 1:
-                $("#nav-bar").css({"background-color": css_secondary});
-                $(".nav-item").eq(selected_tab).css({"color": css_secondary});
-                $("#title-screen").css({"background-color": css_secondary});
+                newColor = css_secondary;
                 break;
             case 2:
-                $("#nav-bar").css({"background-color": css_secondary});
-                $(".nav-item").eq(selected_tab).css({"color": css_secondary});
-                $("#title-screen").css({"background-color": css_secondary});
+                newColor = css_mediumFlesh;
                 break;
         }
+
+    $("#nav-bar").css({"background-color": newColor});
+    $(".nav-item").eq(selected_tab).css({"color": newColor});
+    // $("#section-divider").css({"background-color": newColor});
+    $("#section-divider").css({"border-color": newColor});
+    $("#footer").css({"background-color": newColor});
 
     let contentSection = $("#content-section");
     contentSection.css({"opacity": 0});
@@ -215,10 +408,10 @@ $(".nav-item").on("mousedown", function()
         selected_tab = new_index;
         newTabSelected();
 
-        if (selected_tab !== 2)
-        {
+        // if (selected_tab !== 2)
+        // {
             window.scrollTo({top: $("#section-divider").position().top, behavior: "smooth"});
-        }
+        // }
     }
 
 }).on("mouseenter", function()
@@ -348,9 +541,12 @@ function fadeInTourAreaTTS(index) {
     itemToShow.css({"opacity": "100%"});
 
     if (smallWindow.matches) {
-        $("#tour-section").css({"height": itemToShow.height() + $("#tour-container").height() + 80 + "px"});
+        $("#tour-section").css({"height": itemToShow.height() + $("#tour-container").height() + 150 + "px"});
     }
-    
+    else
+    {
+        $("#tour-section").css({"height": "auto"});
+    }
 }
 
 $("#content-section").on("mouseenter", ".tour-highlight-area-tts", function()
@@ -532,6 +728,19 @@ $("#content-section").on("mouseup", "#email-link", function()
     setTimeout(() =>
     {
         $(this).html("<p>Copy email to clipboard</p>");
+    }, 2000);
+});
+
+$("#content-section").on("mouseup", "#support-link", function()
+{
+    navigator.clipboard.writeText("support@armory-audio.com");
+
+    let currentWidth = $(this).css("width");
+    $(this).html("<p>Copied to clipboard!</p>");
+    $(this).css({"width": currentWidth});
+    setTimeout(() =>
+    {
+        $(this).html("<p>support@armory-audio.com</p>");
     }, 2000);
 });
 
